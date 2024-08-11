@@ -36,3 +36,23 @@
     @include flex(row, flex-start, flex-start);
   }
 }
+.footer-column {
+  @include flex(column, flex-start, flex-start);
+}
+
+.footer-bottom-about {
+  font-family: "Play";
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  &-link {
+    font-family: "Muli";
+    font-weight: 400;
+    color: #858b9f;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+}
+.footer-bottom-width {
+  width: 10.5rem;
+}

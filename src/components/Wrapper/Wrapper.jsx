@@ -1,6 +1,6 @@
 import "./wrapper.scss";
 
-const Wrapper = ({children, width, direction, align, justify, className}) => {
+const Wrapper = ({width, direction, align, justify, className, children}) => {
   return (
     <div
       className={`wrapper ${className}`}
