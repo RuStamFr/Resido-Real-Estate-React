@@ -1,5 +1,8 @@
 import "./footer.scss";
 import Section from "../Section/Section";
+import FooterSignUpBtn from "../FooterSignUpBtn/FooterSignUpBtn";
+import Wrapper from "../Wrapper/Wrapper";
+import Logo from "../Logo/Logo";
 const Footer = () => {
   return (
     <footer className={"footer"}>
@@ -12,8 +15,15 @@ const Footer = () => {
             We'll help you to grow your career and growth.
           </div>
         </div>
+        <FooterSignUpBtn text={"Sign Up Today"} />
       </Section>
-      <Section className={"footer-bottom"}> </Section>
+      <Section className={"footer-bottom"}>
+        <div className="footer-bottom-left">
+          <Wrapper width={"8.75rem"} className={"footer-bottom-left-logo"}>
+            <Logo color={"light"} />
+          </Wrapper>
+        </div>
+      </Section>
       <Section> </Section>
     </footer>
   );

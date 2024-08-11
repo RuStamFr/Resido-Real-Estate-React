@@ -1,9 +1,9 @@
 import "./wrapper.scss";
 
-const Wrapper = ({children, width, direction, align, justify}) => {
+const Wrapper = ({children, width, direction, align, justify, className}) => {
   return (
     <div
-      className="wrapper"
+      className={`wrapper ${className}`}
       style={{
         width: width,
         display: "flex",
