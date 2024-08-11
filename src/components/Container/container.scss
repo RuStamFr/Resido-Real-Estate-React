@@ -1,0 +1,6 @@
+@import "../../styles/mixins";
+
+.container {
+  @include resp(max-width, 100%, 540px, 720px, 960px, 1140px);
+  @include flex(column, center, center);
+}

@@ -1,0 +1,55 @@
+@import "./variables";
+
+@mixin respond-to($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+  @if $size {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "No value found for breakpoint: `#{$breakpoint}`. Available breakpoints: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin resp($property, $xs: null, $sm: null, $md: null, $lg: null, $xl: null) {
+  @if $xs != null {
+    #{$property}: $xs;
+  }
+
+  @if $sm != null {
+    @include respond-to("sm") {
+      #{$property}: $sm;
+    }
+  }
+
+  @if $md != null {
+    @include respond-to("md") {
+      #{$property}: $md;
+    }
+  }
+
+  @if $lg != null {
+    @include respond-to("lg") {
+      #{$property}: $lg;
+    }
+  }
+
+  @if $xl != null {
+    @include respond-to("xl") {
+      #{$property}: $xl;
+    }
+  }
+}
+
+@mixin flex(
+  $direction: column,
+  $align: flex-start,
+  $justify: flex-start,
+  $width: 100%
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  width: $width;
+}

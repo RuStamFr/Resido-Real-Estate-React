@@ -1,0 +1,13 @@
+@import "../../styles/mixins";
+.add-property-link {
+  @include flex(row, center, space-evenly, 9.5rem);
+  color: #0fca98;
+  padding: 0.8rem 0.5rem;
+  border-radius: 4px;
+  flex: none;
+}
+.header-bottom-add-property-span {
+  font-family: "Play";
+  font-size: 1rem;
+  font-weight: 500;
+}

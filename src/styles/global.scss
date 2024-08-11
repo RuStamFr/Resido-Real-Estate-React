@@ -1,0 +1,17 @@
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+@import "./colors";
+
+@font-face {
+  font-family: "Muli";
+  src: url("../assets/fonts/Muli-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Play";
+  src: url("../assets/fonts/Play-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Muli", sans-serif;
+}

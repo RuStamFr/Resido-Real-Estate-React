@@ -1,0 +1,8 @@
+@import "../../styles/mixins";
+
+.section {
+  @include flex(column, center, center);
+  &-content {
+    @include flex(column, center, flex-start);
+  }
+}
