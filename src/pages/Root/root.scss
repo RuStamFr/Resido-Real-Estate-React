@@ -1,5 +1,4 @@
 @import "../../styles/mixins";
 .page-main {
   @include flex(column, center, flex-start);
-  height: 100%;
 }

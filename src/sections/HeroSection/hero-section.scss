@@ -4,6 +4,7 @@
   background: url("../../assets/images/hero-bg.jpg") no-repeat;
   background-position: 50% !important;
   background-size: cover !important;
+  margin-bottom: 30px;
   &-content {
     @include flex(column, flex-start, center);
     padding: 5rem 0;

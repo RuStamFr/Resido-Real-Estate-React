@@ -1,0 +1,25 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+.listing-section {
+  padding: 5rem 0;
+  background-color: #f5faff;
+}
+.listing-section-title-block {
+  @include flex(column, center, center);
+  margin-bottom: 2rem;
+  & h2 {
+    font-family: "Play";
+    font-size: 1.85rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 1.2;
+    color: $textHover;
+  }
+  & p {
+    font-family: "Muli";
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.35rem;
+    color: $textHover;
+  }
+}

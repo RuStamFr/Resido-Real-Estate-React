@@ -1,0 +1,91 @@
+@import "../../styles/_mixins.scss";
+
+.locations-section {
+  &-content {
+    @include flex(column, center, flex-start);
+    padding: 5rem 0;
+    text-align: center;
+  }
+  &-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #2d3954;
+    font-family: "Play";
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  &-desc {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    margin: 0 0 2rem;
+    width: 100%;
+    max-width: 34rem;
+  }
+  &-list {
+    @include flex(row, flex-start, flex-start);
+    flex-wrap: wrap;
+  }
+  &-card {
+    @include flex(column, flex-start, flex-start);
+    width: calc(33% - 1rem);
+    margin: 0 1.5rem 1.5rem 0;
+    background: #fff;
+    border: 1px solid #e2e6f1;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &-content {
+      @include flex(row, center, space-between);
+      padding: 1.5rem 1rem;
+      &-left {
+        @include flex(column, flex-start, flex-start);
+        & h3 {
+          color: #2d3954;
+          font-family: "Play";
+          font-weight: 700;
+          text-transform: capitalize;
+        }
+      }
+    }
+    &-image-link {
+      position: relative;
+      @include flex(column, center, center);
+      padding-top: 66.67%;
+      overflow: hidden;
+    }
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @include flex(column, center, center);
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    &-button-link {
+      @include flex(column, center, center);
+      flex: none;
+      background: #0fca98;
+      border-radius: 50%;
+      height: 2.5rem;
+      width: 2.5rem;
+      transition: all 0.4s ease;
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
+    &-button-icon {
+      @include flex(column, center, center, 50%);
+    }
+  }
+}
