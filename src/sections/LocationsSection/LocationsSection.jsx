@@ -1,7 +1,7 @@
 import "./locations-section.scss";
 import Section from "../../components/Section/Section";
 import Image from "../../components/Image/Image";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import image1 from "../../assets/images/c-1-400xauto.png";
 import image2 from "../../assets/images/c-2-400xauto.png";
 import image3 from "../../assets/images/c-3-400xauto.png";
@@ -9,15 +9,16 @@ import image4 from "../../assets/images/c-4-400xauto.png";
 import image5 from "../../assets/images/c-5-400xauto.png";
 import image6 from "../../assets/images/c-6-400xauto.png";
 import rightArrow from "../../assets/icons/right-arrow.png";
+import GreenBtn from "../../components/GreenBtn/GreenBtn";
 
 const LocationsSection = () => {
   const locations = [
-    { id: 1, href: "#", title: "Newark", desc: "5 Properties", src: image1 },
-    { id: 2, href: "#", title: "Peoria", desc: "4 Properties", src: image2 },
-    { id: 3, href: "#", title: "O'Fallon", desc: "2 Properties", src: image3 },
-    { id: 4, href: "#", title: "Hampton", desc: "4 Properties", src: image4 },
-    { id: 5, href: "#", title: "Lakewood", desc: "1 Properties", src: image5 },
-    { id: 6, href: "#", title: "Mesa", desc: "1 Properties", src: image6 },
+    {id: 1, href: "#", title: "Newark", desc: "5 Properties", src: image1},
+    {id: 2, href: "#", title: "Peoria", desc: "4 Properties", src: image2},
+    {id: 3, href: "#", title: "O'Fallon", desc: "2 Properties", src: image3},
+    {id: 4, href: "#", title: "Hampton", desc: "4 Properties", src: image4},
+    {id: 5, href: "#", title: "Lakewood", desc: "1 Properties", src: image5},
+    {id: 6, href: "#", title: "Mesa", desc: "1 Properties", src: image6},
   ];
   return (
     <Section className={"locations-section"}>
@@ -58,6 +59,7 @@ const LocationsSection = () => {
           );
         })}
       </div>
+      <GreenBtn text={"Browse More Locations"} />
     </Section>
   );
 };

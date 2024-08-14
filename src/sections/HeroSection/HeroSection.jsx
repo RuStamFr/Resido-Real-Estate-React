@@ -1,6 +1,8 @@
 import Section from "../../components/Section/Section";
+import Wrapper from "../../components/Wrapper/Wrapper";
+import Image from "../../components/Image/Image";
 import "./hero-section.scss";
-
+import PinIcon from "../../assets/icons/pin.svg";
 const HeroSection = () => {
   return (
     <Section className={"hero-section"}>
@@ -18,12 +20,9 @@ const HeroSection = () => {
                   name="k"
                   placeholder="Search for a location"
                 />
-                <img
-                  src="https://resido.thesky9.com/themes/resido/img/pin.svg"
-                  width="18"
-                  alt=""
-                  className="form-location-icon"
-                />
+                <Wrapper width={"1.125rem"} className="form-location-icon">
+                  <Image src={PinIcon} />
+                </Wrapper>
               </div>
             </div>
             <div className="form-row">

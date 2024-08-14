@@ -56,7 +56,75 @@
   margin: 0.315rem 0;
   border-radius: 3.125rem;
   display: inline-block;
+  font-family: "Muli";
   font-size: 0.75rem;
   font-weight: 600;
   padding: 0.25rem 0.75rem;
+}
+
+.price-features-wrapper {
+  display: flex;
+  padding: 0 1rem 0.6rem;
+}
+.list-fx-features {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  width: 100%;
+}
+.listing-card-info-icon {
+  align-items: center;
+  margin-right: 1.2rem;
+  width: auto;
+  display: flex;
+}
+
+.listing-card-info-icon {
+  color: #616e96;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-left: 0;
+  position: relative;
+  vertical-align: top;
+  font-family: "Muli";
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.inc-fleat-icon {
+  align-items: center;
+  background-color: #edf1f9;
+  border-radius: 50%;
+  display: inline-flex;
+  height: 25px;
+  justify-content: center;
+  margin-right: 7px;
+  width: 25px;
+}
+
+.listing-footer-wrapper {
+  align-items: center;
+  border-top: 1px solid #e5e9ec;
+  display: flex;
+  padding: 0.9rem 1rem;
+  justify-content: space-between;
+  vertical-align: middle;
+  width: 100%;
+  .listing-locate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  .ti-location-pin {
+    margin-right: 0.3125rem;
+  }
+  .listing-location {
+    display: flex;
+    font-family: "Muli";
+    font-weight: 400;
+    color: $text;
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
 }
