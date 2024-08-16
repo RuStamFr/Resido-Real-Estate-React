@@ -3,6 +3,13 @@
 .listing-section {
   padding: 5rem 0;
   background-color: #f5faff;
+  &-content {
+    width: 100%;
+  }
+  .product-blocks {
+    @include flex(row, flex-start, space-between);
+    flex-wrap: wrap;
+  }
 }
 .listing-section-title-block {
   @include flex(column, center, center);
@@ -22,4 +29,7 @@
     margin-bottom: 0.35rem;
     color: $textHover;
   }
+}
+.green-btn-wrapper {
+  text-align: center;
 }

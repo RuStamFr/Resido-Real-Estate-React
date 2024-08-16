@@ -1,7 +1,7 @@
 import Section from "../../components/Section/Section";
 import "./listing-section.scss";
 import ProductItem from "./ProductItem/ProductItem";
-
+import GreenBtn from "../../components/GreenBtn/GreenBtn";
 const ListingSection = () => {
   return (
     <Section className={"listing-section"}>
@@ -15,7 +15,19 @@ const ListingSection = () => {
           </p>
         </div>
       </div>
-      <ProductItem />
+      <div className="product-blocks">
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+        <ProductItem />
+
+        <ProductItem />
+      </div>
+
+      <div className="green-btn-wrapper">
+        <GreenBtn text={"Browse More Properties"} />
+      </div>
     </Section>
   );
 };

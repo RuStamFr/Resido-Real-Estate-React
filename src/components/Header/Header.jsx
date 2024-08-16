@@ -17,8 +17,8 @@ const Header = () => {
       href: "/agents",
     },
     {
-      name: "Blog",
-      href: "/blog",
+      name: "Blogs",
+      href: "/blogs",
     },
     {
       name: "Favorites",

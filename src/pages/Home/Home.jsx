@@ -1,3 +1,4 @@
+import BlogSection from "../../sections/BlogSection/BlogSection";
 import CtaSection from "../../sections/CtaSection/CtaSection";
 import HeroSection from "../../sections/HeroSection/HeroSection";
 import HiwSection from "../../sections/HiwSection/HiwSection";
@@ -13,6 +14,7 @@ const Home = () => {
       <LocationsSection />
       <HiwSection />
       <CtaSection />
+      <BlogSection />
     </div>
   );
 };

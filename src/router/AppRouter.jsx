@@ -1,7 +1,7 @@
 import AddNewProperty from "../pages/AddNewProperty/AddNewProperty";
 import AgentDetails from "../pages/AgentDetails/AgentDetails";
 import Agents from "../pages/Agents/Agents";
-import Blog from "../pages/Blog/Blog";
+import Blogs from "../pages/Blogs/Blogs";
 import Home from "../pages/Home/Home";
 import BlogDetails from "../pages/BlogDetails/BlogDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
@@ -34,8 +34,8 @@ const router = createBrowserRouter([
         element: <Agents />,
       },
       {
-        path: "blog",
-        element: <Blog />,
+        path: "blogs",
+        element: <Blogs />,
       },
       {
         path: "blog-details/:id",
