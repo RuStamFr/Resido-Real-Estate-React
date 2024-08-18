@@ -1,0 +1,31 @@
+@import "../../styles/colors";
+.page-title {
+  align-items: center;
+  background-color: #2540a2;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 200px;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  &-wrapper {
+    width: 100%;
+    text-align: left;
+  }
+  .blue-banner-title {
+    color: $white;
+    font-family: "Play";
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 4.142em;
+    line-height: 1.31818182em;
+  }
+  .blue-banner-sub-title {
+    font-family: initial;
+    font-size: 20px;
+    font-style: italic;
+    color: #7590f3;
+    font-weight: 400;
+  }
+}

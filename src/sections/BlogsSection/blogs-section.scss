@@ -1,0 +1,35 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.blogs-section {
+  padding: 5rem 0;
+}
+.news-blocks {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.news-section-content {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.news-title-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  .news-title {
+    font-family: "Play";
+    font-size: 1.8125rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $titleText;
+  }
+}

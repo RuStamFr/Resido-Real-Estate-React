@@ -22,14 +22,20 @@ const ProductItem = () => {
       status: "sale",
     },
   ];
+
+  const backgroundStyle = {
+    width: "13.5rem",
+    backgroundImage: `url(${ProductImage})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    height: "100%",
+  };
+
   return (
     <div className="product-block">
       <div className="product-left-block">
-        <Link>
-          <Wrapper width={"13.5rem"}>
-            <Image src={ProductImage} />
-          </Wrapper>
-        </Link>
+        <Link style={backgroundStyle}></Link>
       </div>
       <div className="product-right-block">
         <div className="product-right-block-top">
@@ -87,9 +93,9 @@ const ProductItem = () => {
             </div>
           </div>
           <div className="listing-detail-btn">
-            <a href="#" className="more-btn">
+            <Link href="#" className="more-btn">
               View
-            </a>
+            </Link>
           </div>
         </div>
       </div>
