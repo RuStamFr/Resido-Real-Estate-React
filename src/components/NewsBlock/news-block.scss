@@ -68,3 +68,15 @@
     margin-left: 0.5rem;
   }
 }
+.display-inline-flex {
+  display: inline-flex !important;
+  vertical-align: middle;
+  margin-right: 0.4375rem;
+}
+.news-date-hover {
+  transition: all 0.4s ease;
+  &:hover,
+  &:active {
+    color: #ffa50d;
+  }
+}

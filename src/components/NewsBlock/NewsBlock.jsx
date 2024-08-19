@@ -16,15 +16,27 @@ const NewsBlock = ({title, watched, desc, src}) => {
       <div className="news-info">
         <p className="news-date">
           <div className="news-date-info">
-            <Wrapper width={"1rem"}>
+            <Wrapper width={"1rem"} className={"display-inline-flex"}>
               <Image src={NewsCalendarIcon} />
             </Wrapper>
-            2022/10/03
-            <Link to={"/"}> in Latest news </Link>,
-            <Link to={"/"}>House architecture </Link>,
-            <Link to={"/"}>House design </Link>,
-            <Link to={"/"}>Building materials </Link>-
-            <Wrapper width={"1rem"}>
+            2022/10/03 <span>in </span>
+            <Link to={"/"} className="news-date-hover">
+              Latest news
+            </Link>
+            ,
+            <Link to={"/"} className="news-date-hover">
+              House architecture{" "}
+            </Link>
+            ,
+            <Link to={"/"} className="news-date-hover">
+              House design{" "}
+            </Link>
+            ,
+            <Link to={"/"} className="news-date-hover">
+              Building materials{" "}
+            </Link>
+            -
+            <Wrapper width={"1rem"} className={"display-inline-flex"}>
               <Image src={NewsEyeIcon} />
             </Wrapper>
             {watched}
