@@ -1,6 +1,11 @@
+import LoginSection from "../../sections/LoginSection/LoginSection";
 import "./login.scss";
 
 const Login = () => {
-  return <>Login</>;
+  return (
+    <>
+      <LoginSection />
+    </>
+  );
 };
 export default Login;
