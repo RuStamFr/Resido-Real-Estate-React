@@ -1,0 +1,8 @@
+@import "../../styles/mixins";
+
+.favorites-section-content {
+  @include flex(row, flex-start, flex-start);
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 5rem 0;
+}
