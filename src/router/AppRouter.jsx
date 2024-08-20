@@ -9,6 +9,9 @@ import Favorites from "../pages/Favorites/Favorites";
 import Properties from "../pages/Properties/Properties";
 import SingleProperty from "../pages/SingleProperty/SingleProperty";
 import Root from "../pages/Root/Root";
+import Register from "../pages/Register/Register";
+import Login from "../pages/Login/Login";
+
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -52,6 +55,14 @@ const router = createBrowserRouter([
       {
         path: "single-property/:id",
         element: <SingleProperty />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+      {
+        path: "login",
+        element: <Login />,
       },
     ],
   },

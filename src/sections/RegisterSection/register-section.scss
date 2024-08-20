@@ -1,0 +1,77 @@
+@import "../../styles/mixins";
+.register-section-content {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  text-align: center;
+  padding: 5rem 0;
+  .register-form {
+    width: 100%;
+    max-width: 51.875rem;
+  }
+  .register-block {
+    padding: 2.5em 3em;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    .green-button {
+      margin-bottom: 0.9375rem;
+    }
+    .register-input-blocks {
+      @include flex(row, center, space-between);
+      flex-wrap: wrap;
+    }
+    .text-center {
+      font-family: "Play";
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      color: #2d3954;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    .input-block {
+      width: calc(50% - 1.5rem);
+      position: relative;
+      margin-bottom: 0.9375rem;
+
+      .register-input {
+        width: 100%;
+        height: 60px;
+        padding: 0.5rem 0.75rem 0.5rem 3.125rem;
+        background-color: #f6f8fd;
+        border: 1px solid #edf0f9;
+        border-radius: 0.3125rem;
+        box-shadow: none;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+      }
+      .register-icon {
+        position: absolute;
+        top: 20px;
+        width: 1.125rem;
+        left: 22.5px;
+      }
+    }
+    .form-footer {
+      font-family: "Muli";
+      color: #4e5c79;
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 0.625rem;
+      line-height: 1.8;
+      &-link {
+        color: #fd5332;
+        transition: all 0.3s ease;
+        margin-left: 3px;
+        &:hover,
+        &:active {
+          color: #ffa50d;
+        }
+      }
+    }
+  }
+}
