@@ -1,0 +1,125 @@
+@import "../../styles/colors";
+@import "../../styles/mixins";
+
+.vertical-product-block {
+  margin: 0 0 1.875rem;
+  border-radius: 0.5rem;
+  background-color: $white;
+  box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
+  -webkit-box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
+  width: Calc(33.3333% - 1.5rem);
+  margin-right: 1.5rem;
+  overflow: hidden;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  .vertical-product-block-info {
+    padding: 1rem;
+    .vertical-product-status-block {
+      @include flex(row, center, space-between);
+    }
+    .rent {
+      background: rgba(136, 102, 218, 0.1);
+      color: #8866da;
+      border-radius: 3.125rem;
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      margin: 0.3125rem 0;
+    }
+    .vertical-product-info-price {
+      color: #ffa50d;
+      font-family: "Play";
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.4;
+      padding-left: 0.35em;
+      margin-bottom: 0.5rem;
+    }
+    .vertical-product-name {
+      @include flex(row, center, flex-start);
+      font-family: "Play";
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.625rem;
+      color: #2d3954;
+      margin-bottom: 0.8rem;
+      transition: all 0.3s ease;
+
+      &-link {
+        &:hover,
+        &:active {
+          color: #ffa50d;
+        }
+      }
+    }
+    .reviews-text {
+      font-family: "Muli";
+      font-size: 0.8125rem;
+      font-weight: 600;
+      margin-left: 0.5rem;
+      color: #4e5c79;
+      line-height: 1.7;
+    }
+  }
+  .vertical-block-params-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.1rem 1rem 0.6rem;
+    font-family: "Muli";
+    font-size: 0.8rem;
+    color: #616e96;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+  .vertical-block-param {
+    display: flex;
+    margin-right: 0.7rem;
+    .vertical-block-bed-param {
+      align-items: center;
+      background: #edf1f9;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      margin-right: 7px;
+    }
+    .vertical-block-bed-param-image-img {
+      width: 0.8125rem;
+    }
+  }
+  .vertical-product-footer {
+    @include flex(row, center, space-between);
+    align-items: center;
+    border-top: 1px solid #e4e8f3;
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    &-first {
+      display: flex;
+      font-size: 0.8125rem;
+      line-height: 1.7;
+      color: #4e5c79;
+      font-family: "Muli";
+      font-weight: 400;
+    }
+    .vertical-product-location-icon {
+      margin-right: 0.3125rem;
+    }
+
+    .vertical-product-btn {
+      background: #0fca98;
+      border-radius: 3.125rem;
+      color: $white;
+      font-family: "Muli";
+      font-size: 1rem;
+      font-weight: 400;
+      display: inline-flex;
+      padding: 0.25rem 1.125rem;
+      line-height: 1.7;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

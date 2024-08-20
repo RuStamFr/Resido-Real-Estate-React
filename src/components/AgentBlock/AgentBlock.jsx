@@ -4,10 +4,13 @@ import Agent3 from "../../assets/images/agent 3.jpg";
 import {Link} from "react-router-dom";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import HomeIcon from "../../assets/icons/home-icon.png";
+
 const AgentBlock = () => {
   return (
     <div className={"agent-block"}>
-      <Image className={"agent-image"} src={Agent3} />
+      <Link to={"/agent-details/:id"}>
+        <Image className={"agent-image"} src={Agent3} />
+      </Link>
       <div className="agent-block-detail-wrapper">
         <h5>
           <Link className="agent-block-name">America Gottlieb</Link>
