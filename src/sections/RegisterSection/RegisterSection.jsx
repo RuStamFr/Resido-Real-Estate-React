@@ -13,7 +13,7 @@ const RegisterSection = () => {
     <Section className={"register-section"}>
       <form className="register-form">
         <div className="register-block">
-          <h2 class="text-center">Register</h2>
+          <h2 className="text-center">Register</h2>
 
           <div className="register-input-blocks">
             <div className="input-block">
@@ -88,10 +88,10 @@ const RegisterSection = () => {
             </div>
           </div>
           <GreenBtn text={"Register"} />
-          <div class="form-footer ">
+          <div className="form-footer ">
             <p>
               Have an account already?
-              <Link to={"/login"} class="form-footer-link">
+              <Link to={"/login"} className="form-footer-link">
                 Login
               </Link>
             </p>

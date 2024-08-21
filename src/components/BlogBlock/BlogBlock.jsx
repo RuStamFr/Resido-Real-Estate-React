@@ -4,9 +4,9 @@ import Image from "../Image/Image";
 import {Link} from "react-router-dom";
 import RightYellowArrow from "../../assets/icons/right-arrow-yelow.png";
 import CalendarIcon from "../../assets/icons/icons8-calendar-48.png";
-const BlogBlock = ({title, date, desc, src}) => {
+const BlogBlock = ({title, date, desc, src, className}) => {
   return (
-    <div className="blog-block">
+    <div className={`blog-block ${className}`}>
       <Wrapper className={"blog-block-image"}>
         <Link>
           <Image className={"blog-block-image-border"} src={src} />

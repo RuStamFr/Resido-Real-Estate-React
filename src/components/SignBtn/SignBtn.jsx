@@ -6,7 +6,7 @@ import Wrapper from "../Wrapper/Wrapper";
 
 const SignBtn = ({text}) => {
   return (
-    <Link to={"/"} className="sign-in-link">
+    <Link to={"/login"} className="sign-in-link">
       <Wrapper width={"0.8rem"}>
         <Image src={UserSvg} />
       </Wrapper>

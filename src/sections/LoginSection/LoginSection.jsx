@@ -12,7 +12,7 @@ const LoginSection = () => {
     <Section className={"login-section"}>
       <form className="login-form">
         <div className="login-block">
-          <h2 class="text-center">Login</h2>
+          <h2 className="text-center">Login</h2>
           <div className="login-input-blocks">
             <div className="login-input-block">
               <label htmlFor={"input-mail"}>Email/Username</label>
@@ -45,10 +45,10 @@ const LoginSection = () => {
             <Link className="hover-text">Forgot Your Password?</Link>
           </div>
           <GreenBtn text={"Login"} />
-          <div class="login-footer">
+          <div className="login-footer">
             <p>
               Don't have an account?
-              <Link to={"/register"} class="hover-text">
+              <Link to={"/register"} className="hover-text">
                 Register a new account
               </Link>
             </p>

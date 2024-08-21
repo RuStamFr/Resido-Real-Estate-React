@@ -18,27 +18,27 @@ const VerticalProductItem = () => {
         </Link>
       </div>
       <div className="vertical-product-block-info">
-        <div class="vertical-product-status-block">
+        <div className="vertical-product-status-block">
           <span>
-            <span class="rent">Rent</span>
+            <span className="rent">Rent</span>
           </span>
-          <h6 class="vertical-product-info-price"> $423,759 / monthly </h6>
+          <h6 className="vertical-product-info-price"> $423,759 / monthly </h6>
         </div>
-        <h4 class="vertical-product-name">
-          <Link class="vertical-product-name-link">4113 Holiday Drive</Link>
+        <h4 className="vertical-product-name">
+          <Link className="vertical-product-name-link">4113 Holiday Drive</Link>
         </h4>
-        <div class="rating-wrap">
-          <div class="rating">
-            <div class="product-rate">
+        <div className="rating-wrap">
+          <div className="rating">
+            <div className="product-rate">
               <Wrapper width={"1.1875rem"}>
                 <Image src={StarIcon} />
               </Wrapper>
             </div>
           </div>
-          <span class="reviews-text">(3 Reviews)</span>
+          <span className="reviews-text">(3 Reviews)</span>
         </div>
       </div>
-      <div class="vertical-block-params-wrapper">
+      <div className="vertical-block-params-wrapper">
         <div className="vertical-block-param beds">
           <Wrapper className={"vertical-block-bed-param"} width={"1.5625rem"}>
             <Image className={"vertical-block-bed-param-image"} src={BedIcon} />
@@ -64,8 +64,8 @@ const VerticalProductItem = () => {
           449 m²
         </div>
       </div>
-      <div class="vertical-product-footer">
-        <div class="vertical-product-footer-first">
+      <div className="vertical-product-footer">
+        <div className="vertical-product-footer-first">
           <Wrapper
             className={"vertical-product-location-icon"}
             width={"1.125rem"}
@@ -74,8 +74,8 @@ const VerticalProductItem = () => {
           </Wrapper>
           Lakewood
         </div>
-        <div class="vertical-product-footer-flex">
-          <Link class="vertical-product-btn">View</Link>
+        <div className="vertical-product-footer-flex">
+          <Link className="vertical-product-btn">View</Link>
         </div>
       </div>
     </div>
