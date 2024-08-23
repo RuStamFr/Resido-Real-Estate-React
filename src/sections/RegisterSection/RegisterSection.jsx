@@ -39,7 +39,7 @@ const RegisterSection = () => {
             <div className="input-block">
               <input
                 className="register-input"
-                type="text"
+                type="email"
                 placeholder="Email"
               />
               <Wrapper width={"1.125rem"}>
@@ -59,7 +59,7 @@ const RegisterSection = () => {
             <div className="input-block">
               <input
                 className="register-input"
-                type="text"
+                type="password"
                 placeholder="Password"
               />
               <Wrapper width={"1.125rem"}>
@@ -69,7 +69,7 @@ const RegisterSection = () => {
             <div className="input-block">
               <input
                 className="register-input"
-                type="text"
+                type="password"
                 placeholder="Confirm password"
               />
               <Wrapper width={"1.125rem"}>

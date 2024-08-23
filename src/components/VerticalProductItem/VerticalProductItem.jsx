@@ -9,11 +9,11 @@ import {Link} from "react-router-dom";
 import Wrapper from "../Wrapper/Wrapper";
 import Image from "../Image/Image";
 
-const VerticalProductItem = () => {
+const VerticalProductItem = ({className}) => {
   return (
-    <div className="vertical-product-block">
+    <div className={`vertical-product-block ${className}`}>
       <div className="vertical-product-image-block">
-        <Link>
+        <Link to={"/single-property/:id"}>
           <Image className={"vertical-product-image"} src={ProductImage} />
         </Link>
       </div>
@@ -25,7 +25,12 @@ const VerticalProductItem = () => {
           <h6 className="vertical-product-info-price"> $423,759 / monthly </h6>
         </div>
         <h4 className="vertical-product-name">
-          <Link className="vertical-product-name-link">4113 Holiday Drive</Link>
+          <Link
+            to={"/single-property/:id"}
+            className="vertical-product-name-link"
+          >
+            4113 Holiday Drive
+          </Link>
         </h4>
         <div className="rating-wrap">
           <div className="rating">

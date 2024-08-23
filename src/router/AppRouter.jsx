@@ -11,7 +11,6 @@ import SingleProperty from "../pages/SingleProperty/SingleProperty";
 import Root from "../pages/Root/Root";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
-
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([

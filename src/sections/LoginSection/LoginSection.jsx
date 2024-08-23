@@ -19,6 +19,7 @@ const LoginSection = () => {
               <input
                 id={"input-mail"}
                 className={"login-input"}
+                type="email"
                 placeholder="Email/Username"
               />
               <Wrapper width={"1.125rem"}>
@@ -31,6 +32,7 @@ const LoginSection = () => {
                 id={"input-password"}
                 className={"login-input"}
                 placeholder="Password"
+                type="password"
               />
               <Wrapper width={"1.125rem"}>
                 <Image className={"login-icon"} src={LockIcon} />
