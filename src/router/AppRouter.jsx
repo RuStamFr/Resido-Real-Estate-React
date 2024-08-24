@@ -12,6 +12,7 @@ import Root from "../pages/Root/Root";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
       },
       {
         path: "add-new-property",
-        element: <AddNewProperty />,
+        element: (
+          <ProtectedRoute>
+            <AddNewProperty />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "agent-details/:id",

@@ -9,12 +9,12 @@ const NewsBlock = ({title, watched, desc, src}) => {
   return (
     <div className="news-block">
       <Wrapper className={"news-block-image"}>
-        <Link>
+        <Link to={"/blog-details/:id"}>
           <Image className={"news-block-image-border"} src={src} />
         </Link>
       </Wrapper>
       <div className="news-info">
-        <p className="news-date">
+        <div className="news-date">
           <div className="news-date-info">
             <Wrapper width={"1rem"} className={"display-inline-flex"}>
               <Image src={NewsCalendarIcon} />
@@ -41,7 +41,7 @@ const NewsBlock = ({title, watched, desc, src}) => {
             </Wrapper>
             {watched}
           </div>
-        </p>
+        </div>
       </div>
       <div className="news-body">
         <h4 className="news-title">

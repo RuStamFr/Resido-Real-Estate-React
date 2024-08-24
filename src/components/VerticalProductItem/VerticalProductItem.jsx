@@ -20,7 +20,7 @@ const VerticalProductItem = ({className}) => {
       <div className="vertical-product-block-info">
         <div className="vertical-product-status-block">
           <span>
-            <span className="rent">Rent</span>
+            <span className="vertical-block-status">Rent</span>
           </span>
           <h6 className="vertical-product-info-price"> $423,759 / monthly </h6>
         </div>

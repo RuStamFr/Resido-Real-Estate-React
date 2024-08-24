@@ -1,0 +1,103 @@
+@import "../../styles/mixins";
+
+.single-property-section {
+  background-color: #f3f7fd;
+  &-content {
+    @include flex(row, center, flex-start);
+    padding: 5rem 0;
+  }
+  .property-left-block {
+    width: 100%;
+    max-width: 46.0625rem;
+  }
+  .property-name-status-block {
+    @include flex(column, flex-start, space-between);
+  }
+  .property-block {
+    border-radius: 6px;
+    background-color: #fff;
+    margin-bottom: 1.875rem;
+    padding: 1.5rem;
+    .property-status {
+      background: rgba(136, 102, 218, 0.1);
+      color: #8866da;
+      border-radius: 3.125rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.75rem;
+      margin: 0.3125rem 0;
+      margin-bottom: 5px;
+    }
+    .property-name {
+      font-size: 1.5rem;
+      line-height: 1.875rem;
+      color: #2d3954;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin-bottom: 0.5rem;
+    }
+    .property-address {
+      display: flex;
+      color: #4e5c79;
+      font-family: "Muli";
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    .property-name-icon-img {
+      margin-right: 0.5rem;
+    }
+    .property-price {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      color: #0fca98;
+      line-height: 1.4;
+    }
+    .list-fx-features {
+      @include flex(row, center, end);
+    }
+  }
+
+  .property-block-title {
+    margin-bottom: 1rem;
+    color: #140c40;
+    font-family: "Muli";
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .detail-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .detail-features-li {
+      color: #546cb1;
+      display: inline-block;
+      flex: 0 0 33.333333%;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      width: 33.333333%;
+      & strong {
+        color: #08184b;
+        font-size: 14px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .list-gallery-inline {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    .gallery-li {
+      padding: 5px;
+      width: 33.333333%;
+    }
+    .mfp-gallery-image-img {
+      border-radius: 0.25rem;
+    }
+  }
+}

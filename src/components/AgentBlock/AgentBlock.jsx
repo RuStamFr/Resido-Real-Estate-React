@@ -50,9 +50,7 @@ const AgentBlock = () => {
           2 properties
         </div>
         <div className="agent-block-footer-link">
-          <Link className="prt-view" tabindex="0">
-            View
-          </Link>
+          <Link className="prt-view">View</Link>
         </div>
       </div>
     </div>

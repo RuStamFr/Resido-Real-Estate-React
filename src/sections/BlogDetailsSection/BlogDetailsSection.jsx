@@ -29,7 +29,7 @@ const BlogDetailsSection = ({watched}) => {
             <Image className={"details-image"} src={DetailsImg} />
           </div>
           <div className="details-info">
-            <p className="details-date">
+            <div className="details-date">
               <div className="details-date-info">
                 <Wrapper width={"1.2rem"} className={"display-inline-flex"}>
                   <Image src={NewsCalendarIcon} />
@@ -56,7 +56,7 @@ const BlogDetailsSection = ({watched}) => {
                 </Wrapper>
                 {watched}
               </div>
-            </p>
+            </div>
           </div>
           <h2 className="details-title">
             Average U.S. Rental Price Hits a Two-Year High
@@ -171,8 +171,8 @@ const BlogDetailsSection = ({watched}) => {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
+                          fillRule="evenodd"
+                          clipRule="evenodd"
                           d="M5.37214 24H0.396429V7.97674H5.37214V24ZM2.88161 5.79102C1.29054 5.79102 0 4.47317 0 2.8821C2.37147e-08 1.29063 1.29014 0.000488281 2.88161 0.000488281C4.47307 0.000488281 5.76321 1.29063 5.76321 2.8821C5.76321 4.47317 4.47214 5.79102 2.88161 5.79102ZM23.9946 24H19.0296V16.2C19.0296 14.341 18.9921 11.9571 16.4427 11.9571C13.8557 11.9571 13.4593 13.9767 13.4593 16.066V24H8.48893V7.97674H13.2611V10.1625H13.3307C13.995 8.90352 15.6177 7.57495 18.0386 7.57495C23.0743 7.57495 24 10.891 24 15.1982V24H23.9946Z"
                         />
                       </svg>
@@ -197,20 +197,20 @@ const BlogDetailsSection = ({watched}) => {
         </div>
 
         <div className="details-right">
-          <div class="details-category-block">
-            <h4 class="category-title">Categories</h4>
+          <div className="details-category-block">
+            <h4 className="category-title">Categories</h4>
             <ul className="category-list">
               <li className="category-li">
-                <Link class="text-dark">Latest news</Link>
+                <Link className="text-dark">Latest news</Link>
               </li>
               <li className="category-li">
-                <Link class="text-dark">House architecture</Link>
+                <Link className="text-dark">House architecture</Link>
               </li>
               <li className="category-li">
-                <Link class="text-dark">House design</Link>
+                <Link className="text-dark">House design</Link>
               </li>
               <li className="category-li">
-                <Link class="text-dark">Building materials</Link>
+                <Link className="text-dark">Building materials</Link>
               </li>
             </ul>
           </div>

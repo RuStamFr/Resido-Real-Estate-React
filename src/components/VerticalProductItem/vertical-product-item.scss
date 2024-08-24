@@ -19,7 +19,7 @@
     .vertical-product-status-block {
       @include flex(row, center, space-between);
     }
-    .rent {
+    .vertical-block-status {
       background: rgba(136, 102, 218, 0.1);
       color: #8866da;
       border-radius: 3.125rem;
