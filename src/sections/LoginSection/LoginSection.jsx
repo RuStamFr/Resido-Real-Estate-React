@@ -10,17 +10,22 @@ import GreenBtn from "../../components/GreenBtn/GreenBtn";
 const LoginSection = () => {
   return (
     <Section className={"login-section"}>
-      <form className="login-form">
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        className="login-form"
+      >
         <div className="login-block">
           <h2 className="text-center">Login</h2>
           <div className="login-input-blocks">
             <div className="login-input-block">
-              <label htmlFor={"input-mail"}>Email/Username</label>
+              <label htmlFor={"input-mail"}>Email</label>
               <input
                 id={"input-mail"}
                 className={"login-input"}
                 type="email"
-                placeholder="Email/Username"
+                placeholder="Email"
               />
               <Wrapper width={"1.125rem"}>
                 <Image className={"login-icon"} src={PersonIcon} />
