@@ -1,0 +1,15 @@
+@import "../../styles/mixins";
+.log-out-btn {
+  @include flex(row, center, space-evenly, 6.8rem);
+  background-color: #08184b;
+  color: #fff;
+  padding: 0.8rem 0.5rem;
+  border-radius: 4px;
+  flex: none;
+  border: none;
+}
+.header-bottom-log-out-span {
+  font-family: "Play";
+  font-size: 1rem;
+  font-weight: 500;
+}

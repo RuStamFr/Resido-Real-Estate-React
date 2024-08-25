@@ -6,6 +6,9 @@ import SignBtn from "../SignBtn/SignBtn";
 import Wrapper from "../Wrapper/Wrapper";
 import "./header.scss";
 import AddPropertyBtn from "../AddPropertyBtn/AddPropertyBtn";
+import {useDispatch, useSelector} from "react-redux";
+import LogOutBtn from "../LogOutBtn/LogOutBtn";
+import {logOutUser} from "../../store/slices/authSlice";
 const Header = () => {
   const headerNav = [
     {
@@ -29,6 +32,11 @@ const Header = () => {
       href: "/properties",
     },
   ];
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+  const handleClick = () => {
+    dispatch(logOutUser());
+  };
   return (
     <header className="header">
       <Section className={"header-top"}>
@@ -56,7 +64,12 @@ const Header = () => {
 
         <div className="header-right-btn">
           <AddPropertyBtn text={" Add Property"} />
-          <SignBtn text={"Sign in"} />
+
+          {auth.auth ? (
+            <LogOutBtn text={"Log out"} onClick={handleClick} />
+          ) : (
+            <SignBtn text={"Sign in"} />
+          )}
         </div>
       </Section>
     </header>
