@@ -73,7 +73,7 @@ export const propertyPosts = [
     title: "7336 Pine Road",
     description:
       "Charming and cozy property perfect for first-time buyers or those looking to downsize. Features include a well-maintained garden and a welcoming community.",
-    price: 298000,
+    price: 8000,
     floors: 3,
     beds: 5,
     baths: 1,

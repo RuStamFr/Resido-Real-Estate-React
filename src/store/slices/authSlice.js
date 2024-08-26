@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 const getInitialUsers = () => {
   try {
@@ -11,7 +11,7 @@ const getInitialUsers = () => {
       currentUser: currentUser ? JSON.parse(currentUser) : null,
     };
   } catch (error) {
-    return {auth: false, users: [], currentUser: null};
+    return { auth: false, users: [], currentUser: null };
   }
 };
 const initialState = {
@@ -51,5 +51,5 @@ const authSlice = createSlice({
   },
 });
 
-export const {registerUser, logOutUser, logInUser} = authSlice.actions;
+export const { registerUser, logOutUser, logInUser } = authSlice.actions;
 export default authSlice.reducer;
