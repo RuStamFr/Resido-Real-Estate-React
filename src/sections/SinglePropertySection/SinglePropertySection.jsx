@@ -8,6 +8,10 @@ import BathIcon from "../ListingSection/image/bathtub.svg";
 import MoveIcon from "../ListingSection/image/move.svg";
 import ProductImg from "../../assets/images/11.jpg";
 import {Link} from "react-router-dom";
+import CommentBlock from "../../components/CommentBlock/CommentBlock";
+import CommentImg1 from "../../assets/images/comment-1.jpg";
+import MsgPhoneIcon from "../../assets/icons/msg-telephone-icon.png";
+
 const SinglePropertySection = () => {
   return (
     <Section className={"single-property-section"}>
@@ -56,19 +60,19 @@ const SinglePropertySection = () => {
           <div className="block-body">
             <ul className="detail-features">
               <li className="detail-features-li">
-                <strong>Bedrooms:</strong> 1 Beds{" "}
+                <strong>Bedrooms:</strong> 1 Beds
               </li>
               <li className="detail-features-li">
-                <strong>Bathrooms:</strong> 2 Bath{" "}
+                <strong>Bathrooms:</strong> 2 Bath
               </li>
               <li className="detail-features-li">
-                <strong>Square:</strong>112 m²{" "}
+                <strong>Square:</strong>112 m²
               </li>
               <li className="detail-features-li">
-                <strong>Floors:</strong>3{" "}
+                <strong>Floors:</strong>3
               </li>
               <li className="detail-features-li">
-                <strong>Property Type:</strong>House{" "}
+                <strong>Property Type:</strong>House
               </li>
             </ul>
           </div>
@@ -161,8 +165,78 @@ const SinglePropertySection = () => {
             </li>
           </ul>
         </div>
+        <div className="property-block">
+          <h4 className="property-block-title">3 Reviews</h4>
+          <div className="comment-block">
+            <ul className="comment-block-list">
+              <CommentBlock />
+              <CommentBlock />
+              <CommentBlock />
+            </ul>
+          </div>
+        </div>
       </div>
-      <div className="property-right-block"></div>
+      <div className="property-right-block">
+        <div className="msg-block">
+          <div className="agent-msg-header">
+            <div className="agent-msg-image">
+              <Image className={"agent-image"} src={CommentImg1} />
+            </div>
+            <div className="msg-block-info">
+              <h4>
+                <Link className="msg-agent-name" to={"/agent-details/:id"}>
+                  {" "}
+                  America Gottlieb
+                </Link>
+              </h4>
+              <div className="msg-agent-phone">
+                <Wrapper width={"1rem"}>
+                  <Image src={MsgPhoneIcon} />
+                </Wrapper>
+                <p className="msg-agent-number">+18386611830</p>
+              </div>
+            </div>
+          </div>
+          <div className="msg-form-wrapper">
+            <form>
+              <input
+                className="msg-form-input"
+                type="text"
+                placeholder="Name *"
+                required
+              />
+              <input
+                className="msg-form-input"
+                type="text"
+                placeholder="Phone *"
+                required
+              />
+              <input
+                className="msg-form-input"
+                type="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="text"
+                className="msg-form-input not-allow"
+                placeholder="4113 Holiday Drive"
+                readOnly
+              />
+              <textarea
+                className="msg-form-input text-area"
+                type="email"
+                placeholder="Message"
+                row="5"
+                required
+              ></textarea>
+              <button className="msg-form-btn" type="submit">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </Section>
   );
 };

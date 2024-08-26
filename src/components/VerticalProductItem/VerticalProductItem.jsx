@@ -1,6 +1,6 @@
 import "./vertical-product-item.scss";
 import ProductImage from "../../assets/images/shutterstock_12934753-min.jpg";
-import StarIcon from "../../assets/icons/icons8-star-filled-48.png";
+import StarIcon from "../../assets/icons/star-svgrepo-com.svg";
 import BedIcon from "../../assets/icons/bed.svg";
 import BathIcon from "../../assets/icons/bathtub.svg";
 import MoveIcon from "../../assets/icons/move.svg";
@@ -35,7 +35,7 @@ const VerticalProductItem = ({className}) => {
         <div className="rating-wrap">
           <div className="rating">
             <div className="product-rate">
-              <Wrapper width={"1.1875rem"}>
+              <Wrapper width={"0.75rem"}>
                 <Image src={StarIcon} />
               </Wrapper>
             </div>

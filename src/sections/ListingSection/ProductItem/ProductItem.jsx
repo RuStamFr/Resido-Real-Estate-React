@@ -3,7 +3,7 @@ import Image from "../../../components/Image/Image";
 import Wrapper from "../../../components/Wrapper/Wrapper";
 import ProductImage from "../image/shutterstock_12934753-min.jpg";
 import {Link} from "react-router-dom";
-import StarIcon from "../image/icons8-star-filled-48.png";
+import StarIcon from "../../../assets/icons/star-svgrepo-com.svg";
 import BedIcon from "../image/bed.svg";
 import BathIcon from "../image/bathtub.svg";
 import MoveIcon from "../image/move.svg";
@@ -45,7 +45,7 @@ const ProductItem = () => {
           <div className="product-price-blocks">
             <div className="product-price-left">
               <div className="rating-wrap">
-                <Wrapper width={"1rem"}>
+                <Wrapper width={"0.75rem"}>
                   <Image src={StarIcon} className="product-rating" />
                 </Wrapper>
                 <div className="raiting-star">( 3 Reviews)</div>
