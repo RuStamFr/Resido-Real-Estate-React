@@ -1,21 +1,25 @@
 import Image from "../Image/Image";
 import "./agent-block.scss";
-import Agent3 from "../../assets/images/agent 3.jpg";
 import {Link} from "react-router-dom";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import HomeIcon from "../../assets/icons/home-icon.png";
 
-const AgentBlock = () => {
+const AgentBlock = ({agent}) => {
   return (
     <div className={"agent-block"}>
-      <Link to={"/agent-details/:id"}>
-        <Image className={"agent-image"} src={Agent3} />
+      <Link to={`/agent-details/${agent.id}`}>
+        <Image
+          className={"agent-image"}
+          src={`/public/agents/${agent.id}.jpg`}
+        />
       </Link>
       <div className="agent-block-detail-wrapper">
         <h5>
-          <Link className="agent-block-name">America Gottlieb</Link>
+          <Link to={`/agent-details/${agent.id}`} className="agent-block-name">
+            {agent.name}
+          </Link>
         </h5>
-        <Link className="agent-block-mail-icon">
+        <Link to={`mailto: ${agent.email}`} className="agent-block-mail-icon">
           <svg
             width="800px"
             height="800px"
@@ -32,10 +36,10 @@ const AgentBlock = () => {
       <div className="agent-block-info">
         <ul className="agent-block-info-ul">
           <li>
-            <strong>Phone:</strong> +18386611830
+            <strong>Phone:</strong> {agent.phone}
           </li>
           <li>
-            <strong>Email:</strong> fern17@rohan.info
+            <strong>Email:</strong> {agent.email}
           </li>
         </ul>
       </div>
@@ -47,10 +51,12 @@ const AgentBlock = () => {
           >
             <Image src={HomeIcon} />
           </Wrapper>
-          2 properties
+          {`${agent.count} properties`}
         </div>
         <div className="agent-block-footer-link">
-          <Link className="prt-view">View</Link>
+          <Link to={`/agent-details/${agent.id}`} className="prt-view">
+            View
+          </Link>
         </div>
       </div>
     </div>
