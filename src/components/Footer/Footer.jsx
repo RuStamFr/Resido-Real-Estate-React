@@ -3,9 +3,8 @@ import Section from "../Section/Section";
 import FooterSignUpBtn from "../FooterSignUpBtn/FooterSignUpBtn";
 import Wrapper from "../Wrapper/Wrapper";
 import Logo from "../Logo/Logo";
-import Image from "../Image/Image";
 import FooterBottomLeftInfo from "../FooterBottomLeftInfo/FooterBottomLeftInfo";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className={"footer"}>
@@ -21,7 +20,7 @@ const Footer = () => {
         <FooterSignUpBtn text={"Sign Up Today"} />
       </Section>
       <Section className={"footer-bottom"}>
-        <Wrapper className={"footer-column"}>
+        <Wrapper className={"footer-bottom-left"}>
           <Wrapper width={"8.75rem"} className={"footer-bottom-left-logo"}>
             <Logo color={"light"} />
           </Wrapper>
@@ -29,47 +28,48 @@ const Footer = () => {
             <FooterBottomLeftInfo />
           </div>
         </Wrapper>
-        <Wrapper className={"footer-column"}></Wrapper>
-        <Wrapper className={"footer-column"}>
-          <h3 className="footer-bottom-about">About</h3>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            About us
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            Contact us
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            Terms & Conditions
-          </Link>
-        </Wrapper>
-        <Wrapper className={"footer-column"}>
-          <h3 className="footer-bottom-about footer-bottom-width">
-            MORE INFORMATION
-          </h3>
-          <Link className="footer-bottom-about-link" to={"/properties"}>
-            All properties
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            Houses for sale
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            Houses for rent
-          </Link>
-        </Wrapper>
-        <Wrapper className={"footer-column"}>
-          <h3 className="footer-bottom-about">NEWS</h3>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            Latest news
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            House architecture
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            House design
-          </Link>
-          <Link className="footer-bottom-about-link" to={"/"}>
-            Building materials
-          </Link>
+        <Wrapper className={"footer-bottom-right"}>
+          <Wrapper className={"footer-bottom-column"}>
+            <h3 className="footer-bottom-heading">About</h3>
+            <Link className="footer-bottom-link" to={"/"}>
+              About us
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              Contact us
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              Terms & Conditions
+            </Link>
+          </Wrapper>
+          <Wrapper className={"footer-bottom-column"}>
+            <h3 className="footer-bottom-heading footer-bottom-width">
+              MORE INFORMATION
+            </h3>
+            <Link className="footer-bottom-link" to={"/properties"}>
+              All properties
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              Houses for sale
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              Houses for rent
+            </Link>
+          </Wrapper>
+          <Wrapper className={"footer-bottom-column"}>
+            <h3 className="footer-bottom-heading">NEWS</h3>
+            <Link className="footer-bottom-link" to={"/"}>
+              Latest news
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              House architecture
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              House design
+            </Link>
+            <Link className="footer-bottom-link" to={"/"}>
+              Building materials
+            </Link>
+          </Wrapper>
         </Wrapper>
       </Section>
     </footer>

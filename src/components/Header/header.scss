@@ -1,31 +1,43 @@
 @import "../../styles/mixins";
 @import "../../styles/colors";
 
-.header-top {
-  background-color: $blue;
-  padding: 0.5rem;
-  &-content {
-    @include flex(row, center, flex-end);
-  }
-}
-
-.header-bottom {
-  &-content {
-    padding: 1rem 0;
-    @include flex(row, center, space-between);
-  }
-  .header-nav {
-    @include flex(row, center, space-between, auto);
-    margin-left: 2.5rem;
-    &-link {
-      font-family: "Play";
-      font-weight: 500;
-      font-size: 16px;
-      margin-right: 1.5rem;
-      color: #4e5c79;
+.header {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: white;
+  &-top {
+    background-color: #2b4db9;
+    padding: 0.5rem;
+    height: 3rem;
+    @include resp(display, none, flex);
+    &-content {
+      @include flex(row, center, flex-end);
     }
   }
-  .header-right-btn {
-    @include flex(row, center, space-between, 16.2rem);
+  &-bottom {
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    &-content {
+      height: 5rem;
+      padding: 1rem 0;
+      @include resp(padding, 0 1.5rem, 0);
+      @include flex(row, center, space-between);
+    }
+    .header-nav {
+      @include flex(row, center, space-between, auto);
+      @include resp(display, none, none, none, flex);
+      margin-left: 2.5rem;
+      &-link {
+        font-family: "Play";
+        font-weight: 500;
+        font-size: 16px;
+        margin-right: 1.5rem;
+        color: #4e5c79;
+      }
+    }
+    .header-right-btn {
+      @include flex(row, center, space-between, auto);
+      @include resp(display, none, none, none, flex);
+    }
   }
 }

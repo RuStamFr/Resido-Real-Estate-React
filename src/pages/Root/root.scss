@@ -1,4 +1,5 @@
 @import "../../styles/mixins";
 .page-main {
   @include flex(column, center, flex-start);
+  @include resp(padding-top, 5rem, 8rem);
 }

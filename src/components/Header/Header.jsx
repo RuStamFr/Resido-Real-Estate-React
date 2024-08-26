@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import FavoritesWidget from "../FavoritesWidget/FavoritesWidget";
 import Logo from "../Logo/Logo";
 import Section from "../Section/Section";
@@ -6,32 +6,34 @@ import SignBtn from "../SignBtn/SignBtn";
 import Wrapper from "../Wrapper/Wrapper";
 import "./header.scss";
 import AddPropertyBtn from "../AddPropertyBtn/AddPropertyBtn";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LogOutBtn from "../LogOutBtn/LogOutBtn";
-import {logOutUser} from "../../store/slices/authSlice";
+import { logOutUser } from "../../store/slices/authSlice";
+
+export const headerNav = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Agents",
+    href: "/agents",
+  },
+  {
+    name: "Blogs",
+    href: "/blogs",
+  },
+  {
+    name: "Favorites",
+    href: "/favorites",
+  },
+  {
+    name: "Properties",
+    href: "/properties",
+  },
+];
+
 const Header = () => {
-  const headerNav = [
-    {
-      name: "Home",
-      href: "/",
-    },
-    {
-      name: "Agents",
-      href: "/agents",
-    },
-    {
-      name: "Blogs",
-      href: "/blogs",
-    },
-    {
-      name: "Favorites",
-      href: "/favorites",
-    },
-    {
-      name: "Properties",
-      href: "/properties",
-    },
-  ];
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   const handleClick = () => {
