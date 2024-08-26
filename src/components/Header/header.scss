@@ -19,8 +19,7 @@
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     &-content {
       height: 5rem;
-      padding: 1rem 0;
-      @include resp(padding, 0 1.5rem, 0);
+      padding: 0;
       @include flex(row, center, space-between);
     }
     .header-nav {
