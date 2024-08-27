@@ -1,0 +1,193 @@
+.properties-section {
+  background-color: #f7f9fc;
+}
+.properties-section-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 5rem 0;
+}
+.properties-section .filter-block {
+  background-color: #fff;
+  border: 1px solid #e6eaf1;
+  border-radius: 0.4rem;
+  margin-bottom: 1.875rem;
+  padding: 1.5625rem;
+  width: 100%;
+  max-width: 26rem;
+  margin-right: 1.5rem;
+}
+.properties-section .green-button {
+  width: 100%;
+}
+.properties-section select {
+  color: #6877a5;
+  line-height: 3.5625rem;
+  font-family: "Muli";
+  font-size: 1rem;
+  font-weight: 400;
+}
+.properties-section .properties-filter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+.properties-section .properties-input-with-icon {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.properties-section .properties-form-location-input {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e6eaf3;
+  border-radius: 0.25rem;
+  height: 3.75rem;
+  margin: 0;
+  padding-left: 2.5rem;
+}
+.properties-section .properties-form-location-input::-moz-placeholder {
+  color: #707e9c;
+}
+.properties-section .properties-form-location-input::placeholder {
+  color: #707e9c;
+}
+.properties-section .properties-form-location-icon {
+  position: absolute;
+  top: 1.3125rem;
+  left: 1rem;
+}
+.properties-section .properties-select-div {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.properties-section .properties-select-div .properties-select {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e6eaf3;
+  border-radius: 0.25rem;
+  color: #707e9c;
+  height: 3.75rem;
+  margin: 0;
+  padding: 0 1rem;
+}
+.properties-section .form-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.properties-section .form-row .form-group:first-child {
+  margin-right: 1.5rem;
+}
+.properties-section .form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.properties-section .form-group > * {
+  width: 100%;
+}
+.properties-section .form-group select, .properties-section .form-group input {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e6eaf3;
+  border-radius: 0.25rem;
+  color: #707e9c;
+  height: 3.75rem;
+  margin: 0;
+  padding: 0 1rem;
+}
+.properties-section .content-block {
+  width: 100%;
+}
+.properties-section .content-block .sorting-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.properties-section .content-block .sorting-block .sorting-title {
+  font-family: "Play";
+  font-size: 1.3125rem;
+  font-weight: 700;
+  color: #2d3954;
+  line-height: 1.625rem;
+}
+.properties-section .content-block .sorting-block .sorting-select {
+  border: 1px solid #e6eaf3;
+  border-radius: 0.25rem;
+  color: #626a70;
+  line-height: 57px;
+  padding: 0 1rem;
+  text-align: left;
+  height: 57px;
+  width: 100%;
+}
+.properties-section .content-block .sorting-block .sorting-select-div {
+  margin-right: 1rem;
+  width: 100%;
+}
+.properties-section .content-block .sorting-block .sorting-right-block {
+  display: flex;
+  width: 100%;
+  max-width: 21.25rem;
+  justify-content: flex-end;
+}
+.properties-section .content-block .sorting-block .sorting-list {
+  display: flex;
+  align-items: center;
+}
+.properties-section .content-block .sorting-block .sorting-type-link {
+  margin-right: 0.625rem;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #e1e9ec;
+  border-radius: 4px;
+  display: inline-flex;
+  height: 56px;
+  justify-content: center;
+  transition: all 0.4s ease;
+  width: 56px;
+}
+.properties-section .content-block .sorting-block .sorting-type-link:hover, .properties-section .content-block .sorting-block .sorting-type-link:active {
+  background-color: rgba(25, 206, 109, 0.1);
+  color: #19ce6d;
+  border: 1px solid #19ce6d;
+}
+.properties-section .content-block .sorting-block .active {
+  align-items: center;
+  background-color: rgba(25, 206, 109, 0.1);
+  border: 1px solid #19ce6d;
+  border-radius: 4px;
+  color: #19ce6d;
+  display: inline-flex;
+  height: 56px;
+  justify-content: center;
+  width: 56px;
+}
+.properties-section .content-block .product-blocks {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.properties-section .content-block .product-blocks .properties-product {
+  width: calc(50% - 0.375rem);
+  margin: 0;
+  margin-right: 0.75rem;
+  margin-bottom: 1.875rem;
+}
+.properties-section .content-block .product-blocks .properties-product:nth-child(2n) {
+  margin-right: 0;
+}/*# sourceMappingURL=properties-section.css.map */

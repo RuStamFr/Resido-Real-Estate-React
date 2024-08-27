@@ -6,8 +6,8 @@
   border-radius: 0.5rem;
   background-color: $white;
   box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
-  width: Calc(33.3333% - 1.5rem);
-  margin-right: 1.5rem;
+  width: 100%;
+  margin: 0 0.75rem 1.5rem;
   overflow: hidden;
   &:nth-child(3n) {
     margin-right: 0;

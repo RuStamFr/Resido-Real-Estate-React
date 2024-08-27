@@ -49,7 +49,6 @@
       border-radius: 1.2rem;
       overflow: hidden;
       padding: 0.7em;
-      width: 100%;
     }
   }
 
@@ -76,6 +75,7 @@
   }
   .agent-block-info-ul {
     @include flex(column, flex-start);
+    text-align: left;
     li {
       padding: 0.1rem 1.5rem;
       color: #4e5c79;

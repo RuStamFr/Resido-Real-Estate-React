@@ -1,54 +1,69 @@
-import {Link} from "react-router-dom";
 import Section from "../../components/Section/Section";
 import "./agent-info-section.scss";
 import VerticalProductItem from "../../components/VerticalProductItem/VerticalProductItem";
-const AgentInfoSection = () => {
+import {useState} from "react";
+
+const AgentInfoSection = ({agent, properties}) => {
+  const [tab, setTab] = useState(1);
+  const filtered = properties.filter((property) => {
+    return +property?.agents_id === +agent?.id && +property?.type_id === tab;
+  });
+
   return (
-    <Section className={"agent-info-section"}>
-      <div className="agent-info-blocks">
-        <div className="block-wrap">
-          <div className="block-header">
-            <h4 className="block-title">Agent info</h4>
+    <>
+      <Section className={"agent-info-section"}>
+        <h2 className="agent-info-section-title">Agent info</h2>
+        <ul className="agent-info-section-info">
+          <li className="agent-info-section-info-li">
+            <strong>Ceo</strong>
+            {agent?.name}
+          </li>
+          <li className="agent-info-section-info-li">
+            <strong>Email</strong>
+            {agent?.email}
+          </li>
+          <li className="agent-info-section-info-li">
+            <strong>Phone</strong>
+            {agent?.phone}
+          </li>
+          <li className="agent-info-section-info-li">
+            <strong>Joined on</strong>
+            {agent?.date}
+          </li>
+        </ul>
+      </Section>
+      <Section className={"agent-properties-section"}>
+        <div className="agent-properties-section-nav">
+          <div
+            onClick={() => setTab(1)}
+            className={`agent-properties-section-nav-tab ${
+              tab === 1 ? "active" : ""
+            }`}
+          >
+            Sale
           </div>
-          <div className="block-body">
-            <ul className="proprty-info">
-              <li className="property-info-li">
-                <strong>Ceo</strong>America Gottlieb
-              </li>
-              <li className="property-info-li">
-                <strong>Email</strong>fern17@rohan.info
-              </li>
-              <li className="property-info-li">
-                <strong>Phone</strong>+18386611830
-              </li>
-              <li className="property-info-li">
-                <strong>Joined on</strong> 2022-10-30
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="block-result">
-          <div className="block-result-header">
-            <ul className="nav">
-              <li className="nav-item">
-                <Link className="nav-link active">Sale</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link">Rent</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="block-body">
-            <div className="block-content">
-              <VerticalProductItem />
-              <VerticalProductItem />
-              <VerticalProductItem />
-              <VerticalProductItem />
-            </div>
+          <div
+            onClick={() => setTab(2)}
+            className={`agent-properties-section-nav-tab ${
+              tab === 2 ? "active" : ""
+            }`}
+          >
+            Rent
           </div>
         </div>
-      </div>
-    </Section>
+        <div className="agent-properties-section-list">
+          {filtered.map((property) => {
+            return (
+              <VerticalProductItem
+                key={property?.id}
+                className={"agent-properties-section-list-item"}
+                property={property}
+              />
+            );
+          })}
+        </div>
+      </Section>
+    </>
   );
 };
 

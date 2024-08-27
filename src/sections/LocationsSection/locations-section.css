@@ -1,0 +1,122 @@
+.locations-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 5rem 0;
+  text-align: center;
+}
+.locations-section-title {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: #2d3954;
+  font-family: "Play";
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.locations-section-desc {
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  margin: 0 0 2rem;
+  width: 100%;
+  max-width: 34rem;
+}
+.locations-section-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.locations-section-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  width: calc(33% - 1rem);
+  margin: 0 1.5rem 1.5rem 0;
+  background: #fff;
+  border: 1px solid #e2e6f1;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+.locations-section-card:nth-child(3n) {
+  margin-right: 0;
+}
+.locations-section-card-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+.locations-section-card-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.locations-section-card-content-left h3 {
+  color: #2d3954;
+  font-family: "Play";
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.locations-section-card-image-link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 66.67%;
+  overflow: hidden;
+}
+.locations-section-card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+.locations-section-card-image:hover {
+  transform: scale(1.5);
+}
+.locations-section-card-button-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: none;
+  background: #0fca98;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  transition: all 0.4s ease;
+}
+.locations-section-card-button-link:hover {
+  filter: brightness(0.9);
+}
+.locations-section-card-button-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}/*# sourceMappingURL=locations-section.css.map */

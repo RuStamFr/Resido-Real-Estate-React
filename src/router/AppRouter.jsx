@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "agent-details/:id",
+        path: "agent-details/:agentId",
         element: <AgentDetails />,
       },
       {

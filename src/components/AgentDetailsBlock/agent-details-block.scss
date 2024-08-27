@@ -1,21 +1,37 @@
+@import "../../styles/mixins";
+
 .agency-list {
-  display: flex;
+  @include flex(column, flex-start, flex-start);
+  @include resp(flex-direction, column, column, row);
   margin-bottom: 1.875rem;
-  padding: 0 1.875rem 0 0;
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   margin-top: -2.5rem;
   .agency-avatar {
+    @include resp(width, 100%, 100%, 12.5rem);
+    @include resp(flex, auto, auto, none);
     padding: 1rem;
-    img {
-      border-radius: 0.5rem;
-      margin: 0;
+    .agent-img {
+      position: relative;
+      @include resp(padding-bottom, 66%, 66%, 100%);
       width: 100%;
+      overflow: hidden;
+      @include flex(column, center, center);
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+        margin: 0;
+      }
     }
   }
   .agency-content {
-    padding: 1.875rem 2.5rem 1.25rem;
+    @include resp(padding, 1rem, 1rem, 1.875rem 2.5rem 1.25rem);
   }
   .agency-name {
     background-color: transparent;

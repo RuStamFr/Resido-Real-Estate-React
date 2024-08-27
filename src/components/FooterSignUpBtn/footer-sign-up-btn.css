@@ -1,0 +1,17 @@
+.footer-sign-up-btn-link {
+  padding: 1.15rem 2.5rem;
+  background-color: #fff;
+  color: #333640;
+  font-family: "Muli";
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 3.125rem;
+  flex: none;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.2);
+}
+.footer-sign-up-btn-link:hover {
+  color: #ffa50d;
+}
+.footer-sign-up-btn-link-div {
+  width: 100%;
+}/*# sourceMappingURL=footer-sign-up-btn.css.map */

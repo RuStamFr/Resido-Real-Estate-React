@@ -1,0 +1,22 @@
+.footer-bottom-left-icon-text {
+  margin-left: 0.25rem;
+  font-family: "Muli";
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #858b9f;
+  line-height: 1.8;
+}
+
+.footer-bottom-left-location-icon {
+  display: inline-block;
+  width: 0.75rem;
+  flex: none;
+}
+
+.footer-bottom-margin {
+  margin-bottom: 0.65rem;
+}
+
+.footer-left-icon-image {
+  flex: none;
+}/*# sourceMappingURL=footer-bottom-left-info.css.map */

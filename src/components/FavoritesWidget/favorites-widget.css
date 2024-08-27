@@ -1,0 +1,16 @@
+.favorites-text {
+  font-family: "Muli";
+  color: white;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-left: 0.2rem;
+  height: 1rem;
+}
+
+.favorites-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}/*# sourceMappingURL=favorites-widget.css.map */
