@@ -1,5 +1,4 @@
 import "./vertical-product-item.scss";
-import ProductImage from "../../assets/images/shutterstock_12934753-min.jpg";
 import StarIcon from "../../assets/icons/star-svgrepo-com.svg";
 import BedIcon from "../../assets/icons/bed.svg";
 import BathIcon from "../../assets/icons/bathtub.svg";
@@ -8,13 +7,25 @@ import PinIcon from "../../assets/icons/pin.svg";
 import {Link} from "react-router-dom";
 import Wrapper from "../Wrapper/Wrapper";
 import Image from "../Image/Image";
+import {useSelector} from "react-redux";
 
-const VerticalProductItem = ({className}) => {
+const VerticalProductItem = ({className, property}) => {
+  const locations = useSelector((state) => state.locations.locations);
+
+  const prop_id = (property?.id % 17) + 1;
+
+  const location = locations?.find((item) => {
+    return item?.id === property?.locations_id;
+  })?.name;
+
   return (
     <div className={`vertical-product-block ${className}`}>
       <div className="vertical-product-image-block">
-        <Link to={"/single-property/:id"}>
-          <Image className={"vertical-product-image"} src={ProductImage} />
+        <Link to={`/single-property/${property?.id}`}>
+          <Image
+            className={"vertical-product-image"}
+            src={`/public/properties/${prop_id}-1.jpg`}
+          />
         </Link>
       </div>
       <div className="vertical-product-block-info">
@@ -22,14 +33,19 @@ const VerticalProductItem = ({className}) => {
           <span>
             <span className="vertical-block-status">Rent</span>
           </span>
-          <h6 className="vertical-product-info-price"> $423,759 / monthly </h6>
+          <h6 className="vertical-product-info-price">
+            {`$${property?.price
+              .toString()
+              .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              ${property?.type_id === 1 ? " / monthly" : ""}`}
+          </h6>
         </div>
         <h4 className="vertical-product-name">
           <Link
-            to={"/single-property/:id"}
+            to={`/single-property/${property?.id}`}
             className="vertical-product-name-link"
           >
-            4113 Holiday Drive
+            {property?.title}
           </Link>
         </h4>
         <div className="rating-wrap">
@@ -48,7 +64,7 @@ const VerticalProductItem = ({className}) => {
           <Wrapper className={"vertical-block-bed-param"} width={"1.5625rem"}>
             <Image className={"vertical-block-bed-param-image"} src={BedIcon} />
           </Wrapper>
-          2 Beds
+          {property?.beds} Beds
         </div>
         <div className="vertical-block-param beds">
           <Wrapper className={"vertical-block-bed-param"} width={"1.5625rem"}>
@@ -57,7 +73,7 @@ const VerticalProductItem = ({className}) => {
               src={BathIcon}
             />
           </Wrapper>
-          5 Bath
+          {property?.baths} Bath
         </div>
         <div className="vertical-block-param beds">
           <Wrapper className={"vertical-block-bed-param"} width={"1.5625rem"}>
@@ -66,7 +82,7 @@ const VerticalProductItem = ({className}) => {
               src={MoveIcon}
             />
           </Wrapper>
-          449 m²
+          {property?.area} m²
         </div>
       </div>
       <div className="vertical-product-footer">
@@ -77,10 +93,15 @@ const VerticalProductItem = ({className}) => {
           >
             <Image src={PinIcon} />
           </Wrapper>
-          Lakewood
+          {location}
         </div>
         <div className="vertical-product-footer-flex">
-          <Link className="vertical-product-btn">View</Link>
+          <Link
+            className="vertical-product-btn"
+            to={`/single-property/${property?.id}`}
+          >
+            View
+          </Link>
         </div>
       </div>
     </div>

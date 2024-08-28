@@ -4,8 +4,11 @@ import PinIcon from "../../assets/icons/pin.svg";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import Image from "../../components/Image/Image";
 import GreenBtn from "../../components/GreenBtn/GreenBtn";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import VerticalProductItem from "../../components/VerticalProductItem/VerticalProductItem";
+import GridIcon from "../../assets/images/GridIcon.jsx";
+import GridList from "../../assets/images/GridList.jsx";
+
 const PropertiesSection = () => {
   return (
     <Section className={"properties-section"}>
@@ -100,66 +103,22 @@ const PropertiesSection = () => {
             <ul className="sorting-list">
               <li>
                 <Link className="sorting-type-link active">
-                  <Wrapper>X</Wrapper>
+                  <Wrapper>
+                    <GridIcon className={"grid-icon"} />
+                  </Wrapper>
                 </Link>
               </li>
               <li>
                 <Link className="sorting-type-link">
-                  <Wrapper>X</Wrapper>
+                  <Wrapper>
+                    <GridList className={"grid-icon"} />
+                  </Wrapper>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="product-blocks">
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-          <VerticalProductItem className={"properties-product"} />
-
-          <VerticalProductItem className={"properties-product"} />
           <VerticalProductItem className={"properties-product"} />
           <GreenBtn text={"Load More"} />
         </div>

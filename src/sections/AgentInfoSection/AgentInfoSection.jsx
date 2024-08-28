@@ -40,7 +40,7 @@ const AgentInfoSection = ({agent, properties}) => {
               tab === 1 ? "active" : ""
             }`}
           >
-            Sale
+            Rent
           </div>
           <div
             onClick={() => setTab(2)}
@@ -48,7 +48,7 @@ const AgentInfoSection = ({agent, properties}) => {
               tab === 2 ? "active" : ""
             }`}
           >
-            Rent
+            Sale
           </div>
         </div>
         <div className="agent-properties-section-list">
