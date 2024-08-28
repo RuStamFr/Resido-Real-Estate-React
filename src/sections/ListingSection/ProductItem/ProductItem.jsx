@@ -1,31 +1,26 @@
 import "./product-item.scss";
 import Image from "../../../components/Image/Image";
 import Wrapper from "../../../components/Wrapper/Wrapper";
-import ProductImage from "../image/shutterstock_12934753-min.jpg";
 import {Link} from "react-router-dom";
 import StarIcon from "../../../assets/icons/star-svgrepo-com.svg";
 import BedIcon from "../image/bed.svg";
 import BathIcon from "../image/bathtub.svg";
 import MoveIcon from "../image/move.svg";
 import PinIcon from "../../../assets/icons/pin.svg";
-const ProductItem = () => {
-  const products = [
-    {
-      image: "",
-      address: "",
-      stars: 3,
-      price: "284,473",
-      beds: 3,
-      bath: 2,
-      area: 192,
-      city: "Hampton",
-      status: "sale",
-    },
-  ];
+import {useSelector} from "react-redux";
+
+const ProductItem = ({className, property}) => {
+  const locations = useSelector((state) => state.locations.locations);
+
+  const prop_id = (property?.id % 17) + 1;
+
+  const location = locations?.find((item) => {
+    return item?.id === property?.locations_id;
+  })?.name;
 
   const backgroundStyle = {
     width: "13.5rem",
-    backgroundImage: `url(${ProductImage})`,
+    backgroundImage: `url("/public/properties/${prop_id}-1.jpg")`,
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
@@ -35,12 +30,18 @@ const ProductItem = () => {
   return (
     <div className="product-block">
       <div className="product-left-block">
-        <Link style={backgroundStyle}></Link>
+        <Link
+          to={`/single-property/${property?.id}`}
+          style={backgroundStyle}
+        ></Link>
       </div>
       <div className="product-right-block">
         <div className="product-right-block-top">
-          <Link className="product-address">
-            <h4>6007 Applegate Lane</h4>
+          <Link
+            to={`/single-property/${property?.id}`}
+            className="product-address"
+          >
+            <h4>{property?.title}</h4>
           </Link>
           <div className="product-price-blocks">
             <div className="product-price-left">
@@ -50,9 +51,19 @@ const ProductItem = () => {
                 </Wrapper>
                 <div className="raiting-star">( 3 Reviews)</div>
               </div>
-              <p className="product-status">Sale</p>
+              <p
+                className={`product-status ${
+                  property?.type_id === 2 ? "red" : ""
+                }`}
+              >{`${property?.type_id === 1 ? "Rent" : "Sale"}`}</p>
             </div>
-            <h6 className="product-price"> $284,473 </h6>
+            <h6 className="product-price">
+              {" "}
+              {`$${property?.price
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
+              ${property?.type_id === 1 ? " / monthly" : ""}`}{" "}
+            </h6>
           </div>
         </div>
         <div className="price-features-wrapper">
@@ -63,7 +74,7 @@ const ProductItem = () => {
                   <Image src={BedIcon} />
                 </Wrapper>
               </div>
-              3 Beds
+              {property?.beds} Beds
             </div>
             <div className="listing-card-info-icon">
               <div className="inc-fleat-icon">
@@ -71,7 +82,7 @@ const ProductItem = () => {
                   <Image src={BathIcon} />
                 </Wrapper>
               </div>
-              1 Bath
+              {property?.baths} Bath
             </div>
             <div className="listing-card-info-icon">
               <div className="inc-fleat-icon">
@@ -79,7 +90,7 @@ const ProductItem = () => {
                   <Image src={MoveIcon} />
                 </Wrapper>
               </div>
-              290 m²
+              {property?.area} m²
             </div>
           </div>
         </div>
@@ -89,11 +100,11 @@ const ProductItem = () => {
               <Wrapper className="ti-location-pin" width={"0.94rem"}>
                 <Image src={PinIcon} />
               </Wrapper>
-              Hampton
+              {location}
             </div>
           </div>
           <div className="listing-detail-btn">
-            <Link href="#" className="more-btn">
+            <Link to={`/single-property/${property?.id}`} className="more-btn">
               View
             </Link>
           </div>

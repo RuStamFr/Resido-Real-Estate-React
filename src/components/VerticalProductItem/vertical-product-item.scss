@@ -27,6 +27,10 @@
       font-weight: 600;
       padding: 0.25rem 0.75rem;
       margin: 0.3125rem 0;
+      &.red {
+        background-color: rgba(247, 68, 0, 0.1);
+        color: #f74400;
+      }
     }
     .vertical-product-info-price {
       color: #ffa50d;

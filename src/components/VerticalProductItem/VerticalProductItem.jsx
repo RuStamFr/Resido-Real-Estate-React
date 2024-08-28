@@ -31,7 +31,11 @@ const VerticalProductItem = ({className, property}) => {
       <div className="vertical-product-block-info">
         <div className="vertical-product-status-block">
           <span>
-            <span className="vertical-block-status">Rent</span>
+            <span
+              className={`vertical-block-status ${
+                property?.type_id === 2 ? "red" : ""
+              }`}
+            >{`${property?.type_id === 1 ? "Rent" : "Sale"}`}</span>
           </span>
           <h6 className="vertical-product-info-price">
             {`$${property?.price
