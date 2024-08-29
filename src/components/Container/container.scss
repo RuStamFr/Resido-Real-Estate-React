@@ -1,7 +1,7 @@
 @import "../../styles/mixins";
 
 .container {
-  @include resp(max-width, 100%, 100%, 100%, 100%, 1140px);
+  @include resp(max-width, 100%, 100%, 100%, 100%, 1300px);
   @include flex(column, center, center);
   padding: 0 1.5rem;
 }

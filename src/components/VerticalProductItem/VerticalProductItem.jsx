@@ -1,5 +1,4 @@
 import "./vertical-product-item.scss";
-import StarIcon from "../../assets/icons/star-svgrepo-com.svg";
 import BedIcon from "../../assets/icons/bed.svg";
 import BathIcon from "../../assets/icons/bathtub.svg";
 import MoveIcon from "../../assets/icons/move.svg";
@@ -8,6 +7,7 @@ import {Link} from "react-router-dom";
 import Wrapper from "../Wrapper/Wrapper";
 import Image from "../Image/Image";
 import {useSelector} from "react-redux";
+import StarComponent from "../StarComponent/StarComponent";
 
 const VerticalProductItem = ({className, property}) => {
   const locations = useSelector((state) => state.locations.locations);
@@ -55,12 +55,9 @@ const VerticalProductItem = ({className, property}) => {
         <div className="rating-wrap">
           <div className="rating">
             <div className="product-rate">
-              <Wrapper width={"0.75rem"}>
-                <Image src={StarIcon} />
-              </Wrapper>
+              <StarComponent rating={4} totalReviews={3} />
             </div>
           </div>
-          <span className="reviews-text">(3 Reviews)</span>
         </div>
       </div>
       <div className="vertical-block-params-wrapper">
