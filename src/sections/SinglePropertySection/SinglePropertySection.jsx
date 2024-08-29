@@ -13,6 +13,8 @@ import Slider from "../../components/Slider/Slider";
 import {useLocation} from "react-router-dom";
 import {useSelector} from "react-redux";
 import PopupImage from "../../components/PopupImage/PopupImage";
+import SetStarRating from "../../components/SetStarRating/SetStarRating";
+import {useEffect, useState} from "react";
 
 const SinglePropertySection = () => {
   const location = useLocation();
@@ -24,10 +26,74 @@ const SinglePropertySection = () => {
   const prop_id = (lastPathItem % 17) + 1;
 
   const property = propertyPosts.find((item) => {
-    return +item.id === +lastPathItem;
+    return +item?.id === +lastPathItem;
   });
 
   const agents = useSelector((state) => state.agents.agents);
+
+  const [name, setName] = useState("");
+  const [title, setTitle] = useState("");
+  const [rating, setRating] = useState(0);
+  const [message, setMessage] = useState("");
+  const [photo, setPhoto] = useState(null);
+  const [comments, setComments] = useState(property?.comments || []);
+
+  useEffect(() => {
+    const storedPropertyPosts = JSON.parse(
+      localStorage.getItem("propertyPosts")
+    );
+    if (storedPropertyPosts) {
+      const storedProperty = storedPropertyPosts.find(
+        (post) => post?.id === property?.id
+      );
+      if (storedProperty) {
+        setComments(storedProperty.comments || []);
+      }
+    }
+  }, [property?.id]);
+
+  const handleFileUpload = (e) => {
+    setPhoto(e.target.files[0]);
+  };
+
+  const handleRatingChange = (newRating) => {
+    setRating(newRating);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newComment = {
+      id: comments.length + 1,
+      name,
+      title,
+      rating,
+      message,
+      photo: photo ? URL.createObjectURL(photo) : null,
+      date: new Date().toISOString(),
+    };
+
+    const updatedComments = [...comments, newComment];
+    setComments(updatedComments);
+
+    const updatedPropertyPosts = propertyPosts.map((post) => {
+      if (post?.id === property?.id) {
+        return {
+          ...post,
+          comments: updatedComments,
+        };
+      }
+      return post;
+    });
+
+    localStorage.setItem("propertyPosts", JSON.stringify(updatedPropertyPosts));
+
+    setName("");
+    setTitle("");
+    setRating(0);
+    setMessage("");
+    setPhoto(null);
+  };
 
   const getItems = () => {
     const src_1 = `/public/properties/${prop_id}-1.jpg`;
@@ -45,7 +111,7 @@ const SinglePropertySection = () => {
   };
 
   const agent = agents.find((item) => {
-    return +item.id === +property.agents_id;
+    return +item?.id === +property.agents_id;
   });
 
   return (
@@ -68,7 +134,6 @@ const SinglePropertySection = () => {
                 {property?.address}
               </span>
               <h3 className="property-price">
-                {" "}
                 {`$${property?.price
                   .toString()
                   .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
@@ -130,7 +195,7 @@ const SinglePropertySection = () => {
             <ul className="list-gallery-inline">
               {getItems().map((item) => {
                 return (
-                  <li key={item.id} className="gallery-li">
+                  <li key={item?.id} className="gallery-li">
                     <div className="mfp-gallery">
                       <PopupImage
                         src={item?.src}
@@ -143,12 +208,12 @@ const SinglePropertySection = () => {
             </ul>
           </div>
           <div className="property-block">
-            <h4 className="property-block-title">3 Reviews</h4>
+            <h4 className="property-block-title">{comments.length} Reviews</h4>
             <div className="comment-block">
               <ul className="comment-block-list">
-                <CommentBlock />
-                <CommentBlock />
-                <CommentBlock />
+                {comments.map((comment) => {
+                  return <CommentBlock key={comment?.id} comment={comment} />;
+                })}
               </ul>
             </div>
           </div>
@@ -176,40 +241,46 @@ const SinglePropertySection = () => {
                 </div>
               </div>
             </div>
-            <form className="msg-form">
-              <input
-                className="msg-form-input"
-                type="text"
-                placeholder="Name *"
-                required
-              />
-              <input
-                className="msg-form-input"
-                type="text"
-                placeholder="Phone *"
-                required
-              />
-              <input
-                className="msg-form-input"
-                type="email"
-                placeholder="Email"
-                required
-              />
+            <form className="msg-form" onSubmit={handleSubmit}>
+              <SetStarRating onRatingChange={handleRatingChange} />
+
               <input
                 type="text"
                 className="msg-form-input not-allow"
                 placeholder={`${property?.title}`}
                 readOnly
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+              <input
+                className="msg-form-input"
+                type="text"
+                placeholder="Name *"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
               <textarea
                 className="msg-form-input text-area"
-                type="email"
                 placeholder="Message"
-                row="5"
+                rows="5"
                 required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
+              <label htmlFor="file-upload" className="file-upload-label">
+                Please upload an image (File picker will be in your system's
+                default language)
+              </label>
+              <input
+                id="file-upload"
+                className="msg-form-input"
+                type="file"
+                accept="image/*"
+                onChange={handleFileUpload}
+              />
               <button className="msg-form-btn" type="submit">
-                Send Comment
+                Submit Comment
               </button>
             </form>
           </div>

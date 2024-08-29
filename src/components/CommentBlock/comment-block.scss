@@ -1,0 +1,15 @@
+.comment-block-list-item {
+  .comment-image {
+    width: 5rem;
+    height: 5rem;
+    flex: none;
+    border-radius: 50%;
+    overflow: hidden;
+
+    .comment-image-person {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

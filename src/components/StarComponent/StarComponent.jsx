@@ -1,6 +1,6 @@
 import "./star-component.scss";
 
-const StarComponent = ({rating, totalReviews}) => {
+const StarComponent = ({rating, totalReviews = null}) => {
   const renderStars = () => {
     let stars = [];
     for (let i = 0; i < 5; i++) {
@@ -16,7 +16,9 @@ const StarComponent = ({rating, totalReviews}) => {
   return (
     <div className="review-stars">
       <div className="stars">{renderStars()}</div>
-      <div className="reviews-label">({totalReviews} reviews)</div>
+      {totalReviews && (
+        <div className="reviews-label">({totalReviews} reviews)</div>
+      )}
     </div>
   );
 };

@@ -1,0 +1,19 @@
+.star-rating {
+  display: inline-flex;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  padding: 0.4rem;
+  transition: color 0.2s;
+}
+
+.gray {
+  color: gray;
+}
+
+.orange {
+  color: orange;
+}
