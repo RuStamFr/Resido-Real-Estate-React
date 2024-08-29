@@ -1,0 +1,21 @@
+@import "../../styles/mixins";
+
+.slider {
+  width: 100%;
+  @include flex(row, center, center);
+  .swiper-wrapper {
+    @include resp(width, 100%, 100%, 86%);
+    overflow: visible;
+  }
+  &-image-holder {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
