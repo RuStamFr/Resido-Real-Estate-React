@@ -2,6 +2,7 @@
 
 .slider {
   width: 100%;
+  background-color: hwb(28 87% 8% / 0.518);
   @include flex(row, center, center);
   .swiper-wrapper {
     @include resp(width, 100%, 100%, 86%);

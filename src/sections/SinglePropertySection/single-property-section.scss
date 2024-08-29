@@ -3,12 +3,12 @@
 .single-property-section {
   background-color: #f3f7fd;
   &-content {
-    @include flex(row, flex-start, flex-start);
+    @include flex(column, flex-start, flex-start);
+    @include resp(flex-direction, column, column, column, row);
     padding: 5rem 0;
   }
   .property-left-block {
     width: 100%;
-    max-width: 46.0625rem;
     margin-right: 1.5rem;
   }
   .property-name-status-block {
@@ -28,6 +28,10 @@
       padding: 0.25rem 0.75rem;
       margin: 0.3125rem 0;
       margin-bottom: 5px;
+      &.red {
+        background-color: rgba(247, 68, 0, 0.1);
+        color: #f74400;
+      }
     }
     .property-name {
       font-size: 1.5rem;
@@ -95,7 +99,7 @@
     width: 100%;
     .gallery-li {
       padding: 5px;
-      width: 33.333333%;
+      @include resp(width, 100%, 50%, 33.33%);
     }
     .mfp-gallery-image-img {
       border-radius: 0.25rem;
@@ -147,7 +151,7 @@
   }
   .property-right-block {
     width: 100%;
-    max-width: 25.875rem;
+    @include resp(max-width, 100%, 100%, 100%, 26.5rem);
     .msg-block {
       align-items: center;
       color: #fff;
@@ -170,9 +174,15 @@
         padding: 1.5rem 1.4rem;
         background-color: #0fca98;
       }
+
       .agent-image {
         width: 60px;
+        height: 60px;
+
+        object-fit: cover;
         &-img {
+          width: 100%;
+          height: 100%;
           border-radius: 50%;
         }
       }
@@ -187,7 +197,7 @@
         margin-left: 0.625rem;
       }
     }
-    .msg-form-wrapper {
+    .msg-form {
       width: 100%;
       background-color: #fff;
       padding: 1.5rem;
