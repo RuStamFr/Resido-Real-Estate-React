@@ -6,7 +6,7 @@ import "./heart.scss";
 const Heart = ({property}) => {
   const dispatch = useDispatch();
   const favourites = useSelector((state) => state.favourites || []);
-  console.log("favorites", favourites);
+
   const isFavorite = favourites?.some((fav) => fav?.id === property?.id);
 
   const handleDivClick = (e) => {

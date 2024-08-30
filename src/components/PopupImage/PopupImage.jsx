@@ -3,7 +3,7 @@ import "./popup-image.scss";
 
 const PopupImage = ({src, className, alt}) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 992);
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1024);
 
   const togglePopup = () => {
     if (isLargeScreen) {
@@ -13,7 +13,7 @@ const PopupImage = ({src, className, alt}) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLargeScreen(window.innerWidth > 992);
+      setIsLargeScreen(window.innerWidth > 1024);
     };
 
     window.addEventListener("resize", handleResize);

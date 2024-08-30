@@ -12,19 +12,6 @@ const HeroSection = () => {
         </div>
         <form>
           <div className="hero-search-content">
-            <div className="form-group">
-              <div className="input-with-icon">
-                <input
-                  type="text"
-                  className="form-location-input"
-                  name="k"
-                  placeholder="Search for a location"
-                />
-                <Wrapper width={"1.125rem"} className="form-location-icon">
-                  <Image src={PinIcon} />
-                </Wrapper>
-              </div>
-            </div>
             <div className="form-row">
               <div className="form-group form-group-double">
                 <label htmlFor="minprice">Min Price</label>
@@ -39,11 +26,7 @@ const HeroSection = () => {
               </div>
               <div className="form-group form-group-double">
                 <label htmlFor="maxprice">Max Price</label>
-                <select
-                  id="maxprice"
-                  name="max_price"
-                  className="form-price-select"
-                >
+                <select id="maxprice" className="form-price-select">
                   <option value="">No Max</option>
                   <option value="50000">50000</option>
                 </select>
@@ -52,22 +35,14 @@ const HeroSection = () => {
             <div className="form-row">
               <div className="form-group ">
                 <label htmlFor="ptypes">Property Type</label>
-                <select
-                  id="ptypes"
-                  name="category_id"
-                  className="form-category-select"
-                >
+                <select id="ptypes" className="form-category-select">
                   <option value="">Category</option>
                   <option value="1">Apartment</option>
                 </select>
               </div>
               <div className="form-group ">
                 <label htmlFor="select-bedroom">Bed Rooms</label>
-                <select
-                  id="select-bedroom"
-                  name="bedroom"
-                  className="form-bed-select"
-                >
+                <select id="select-bedroom" className="form-bed-select">
                   <option value="">Bedroom</option>
                   <option value="1">1</option>
                 </select>
@@ -75,7 +50,7 @@ const HeroSection = () => {
             </div>
             <div className="form-group">
               <label htmlFor="city_id">Property Location</label>
-              <select id="city_id" name="city_id" className="form-city-select">
+              <select id="city_id" className="form-city-select">
                 <option value="">City</option>
               </select>
             </div>

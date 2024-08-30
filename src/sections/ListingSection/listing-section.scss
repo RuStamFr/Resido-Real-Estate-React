@@ -4,16 +4,33 @@
   padding: 5rem 0;
   background-color: #f5faff;
   &-content {
+    @include flex(column, center, flex-start);
     width: 100%;
   }
   .product-blocks {
     @include flex(row, flex-start, space-between);
     flex-wrap: wrap;
+    .product-block {
+      width: calc(50% - 0.75rem);
+    }
+    .vertical-product-block {
+      @include resp(
+        width,
+        100%,
+        100%,
+        calc(50% - 1.5rem),
+        calc(33.33% - 1.5rem)
+      );
+    }
   }
+}
+.listing-section-wrapper {
+  max-width: 30rem;
 }
 .listing-section-title-block {
   @include flex(column, center, center);
   margin-bottom: 2rem;
+  text-align: center;
   & h2 {
     font-family: "Play";
     font-size: 1.85rem;
@@ -32,4 +49,9 @@
 }
 .green-btn-wrapper {
   text-align: center;
+}
+@media (max-width: 1300px) {
+  .product-blocks {
+    flex-direction: column;
+  }
 }

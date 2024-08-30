@@ -18,9 +18,12 @@
   &-bottom {
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     &-content {
-      height: 5rem;
+      height: auto;
+      min-height: 5rem;
       padding: 0;
       @include flex(row, center, space-between);
+      @include resp(flex-direction, column, column, row, row);
+      @include resp(margin-top, 1rem, 1rem, 0, 0);
     }
     .header-nav {
       @include flex(row, center, space-between, auto);
@@ -36,7 +39,8 @@
     }
     .header-right-btn {
       @include flex(row, center, space-between, auto);
-      @include resp(display, none, none, none, flex);
+      @include resp(display, flex, flex, flex, flex);
+      @include resp(margin, 1rem 0, 1rem 0, 0, 0);
     }
   }
 }
