@@ -24,14 +24,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      {
-        path: "add-new-property",
-        element: (
-          <ProtectedRoute>
-            <AddNewProperty />
-          </ProtectedRoute>
-        ),
-      },
+      // {
+      //   path: "add-new-property",
+      //   element: (
+      //     <ProtectedRoute>
+      //       <AddNewProperty />
+      //     </ProtectedRoute>
+      //   ),
+      // },
       {
         path: "agent-details/:agentId",
         element: <AgentDetails />,
@@ -50,7 +50,11 @@ const router = createBrowserRouter([
       },
       {
         path: "favorites",
-        element: <Favorites />,
+        element: (
+          <ProtectedRoute>
+            <Favorites />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "properties",

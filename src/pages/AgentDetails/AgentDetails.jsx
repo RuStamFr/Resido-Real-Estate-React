@@ -7,7 +7,6 @@ import {useParams} from "react-router-dom";
 const AgentDetails = () => {
   const {agentId} = useParams();
   const agents = useSelector((state) => state.agents.agents);
-  const dispatch = useDispatch();
 
   const properties = useSelector((state) => state.propertyPosts.propertyPosts);
 
