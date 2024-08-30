@@ -191,7 +191,7 @@
 
       .properties-product {
         @include resp(width, 100%, 100%, calc(50% - 0.75rem));
-        @include resp(margin-right, 0, 1.5rem);
+        @include resp(margin-right, 0, 0, 1.5rem);
         margin: 0;
         margin-bottom: 1.5rem;
 

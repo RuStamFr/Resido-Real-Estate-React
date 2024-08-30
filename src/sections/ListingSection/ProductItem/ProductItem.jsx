@@ -8,6 +8,8 @@ import BathIcon from "../image/bathtub.svg";
 import MoveIcon from "../image/move.svg";
 import PinIcon from "../../../assets/icons/pin.svg";
 import {useSelector} from "react-redux";
+import StarComponent from "../../../components/StarComponent/StarComponent";
+import Heart from "../../../components/Heart/Heart";
 
 const ProductItem = ({className, property}) => {
   const locations = useSelector((state) => state.locations.locations);
@@ -34,6 +36,7 @@ const ProductItem = ({className, property}) => {
           to={`/single-property/${property?.id}`}
           style={backgroundStyle}
         ></Link>
+        <Heart property={property} />
       </div>
       <div className="product-right-block">
         <div className="product-right-block-top">
@@ -46,10 +49,10 @@ const ProductItem = ({className, property}) => {
           <div className="product-price-blocks">
             <div className="product-price-left">
               <div className="rating-wrap">
-                <Wrapper width={"0.75rem"}>
-                  <Image src={StarIcon} className="product-rating" />
-                </Wrapper>
-                <div className="raiting-star">( 3 Reviews)</div>
+                <StarComponent
+                  rating={property?.stars}
+                  totalReviews={property?.reviews}
+                />
               </div>
               <p
                 className={`product-status ${
@@ -58,7 +61,6 @@ const ProductItem = ({className, property}) => {
               >{`${property?.type_id === 1 ? "Rent" : "Sale"}`}</p>
             </div>
             <h6 className="product-price">
-              {" "}
               {`$${property?.price
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}

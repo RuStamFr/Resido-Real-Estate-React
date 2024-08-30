@@ -1,0 +1,23 @@
+.heart-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 1px solid white;
+  border-radius: 0.4rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  .heart {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 0;
+
+    &.filled {
+      color: red;
+    }
+  }
+}

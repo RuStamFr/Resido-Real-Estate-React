@@ -15,8 +15,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 3,
     type_id: 1,
-    stars: 2,
-    reviews: 6,
   },
   {
     id: 2,
@@ -34,8 +32,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 1,
     type_id: 1,
-    stars: 4,
-    reviews: 3,
   },
   {
     id: 3,
@@ -53,8 +49,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 11,
     type_id: 1,
-    stars: 5,
-    reviews: 5,
   },
   {
     id: 4,
@@ -72,8 +66,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 1,
-    stars: 4,
-    reviews: 8,
   },
   {
     id: 5,
@@ -91,8 +83,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 4,
     type_id: 2,
-    stars: 1,
-    reviews: 6,
   },
   {
     id: 6,
@@ -110,8 +100,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 8,
     type_id: 1,
-    stars: 4,
-    reviews: 10,
   },
   {
     id: 7,
@@ -129,8 +117,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 12,
     type_id: 1,
-    stars: 4,
-    reviews: 1,
   },
   {
     id: 8,
@@ -148,8 +134,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 3,
     type_id: 1,
-    stars: 2,
-    reviews: 8,
   },
   {
     id: 9,
@@ -167,8 +151,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 10,
     type_id: 2,
-    stars: 1,
-    reviews: 0,
   },
   {
     id: 10,
@@ -186,8 +168,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 6,
     type_id: 2,
-    stars: 2,
-    reviews: 2,
   },
   {
     id: 11,
@@ -205,8 +185,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 6,
     type_id: 1,
-    stars: 3,
-    reviews: 3,
   },
   {
     id: 12,
@@ -224,8 +202,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 4,
     type_id: 1,
-    stars: 1,
-    reviews: 2,
   },
   {
     id: 13,
@@ -243,8 +219,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 7,
     type_id: 2,
-    stars: 4,
-    reviews: 3,
   },
   {
     id: 14,
@@ -262,8 +236,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 7,
     type_id: 2,
-    stars: 3,
-    reviews: 3,
   },
   {
     id: 15,
@@ -281,8 +253,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 1,
     type_id: 2,
-    stars: 5,
-    reviews: 6,
   },
   {
     id: 16,
@@ -300,8 +270,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 12,
     type_id: 1,
-    stars: 4,
-    reviews: 7,
   },
   {
     id: 17,
@@ -319,8 +287,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 9,
     type_id: 2,
-    stars: 4,
-    reviews: 10,
   },
   {
     id: 18,
@@ -338,8 +304,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 4,
     type_id: 2,
-    stars: 2,
-    reviews: 4,
   },
   {
     id: 19,
@@ -357,8 +321,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 11,
     type_id: 2,
-    stars: 1,
-    reviews: 8,
   },
   {
     id: 20,
@@ -376,8 +338,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 10,
     type_id: 1,
-    stars: 1,
-    reviews: 1,
   },
   {
     id: 21,
@@ -395,8 +355,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 5,
     type_id: 2,
-    stars: 5,
-    reviews: 3,
   },
   {
     id: 22,
@@ -414,8 +372,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 4,
     type_id: 1,
-    stars: 3,
-    reviews: 6,
   },
   {
     id: 23,
@@ -433,8 +389,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 9,
     type_id: 1,
-    stars: 3,
-    reviews: 4,
   },
   {
     id: 24,
@@ -452,8 +406,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 5,
     type_id: 2,
-    stars: 4,
-    reviews: 7,
   },
   {
     id: 25,
@@ -471,8 +423,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 4,
     type_id: 2,
-    stars: 1,
-    reviews: 7,
   },
   {
     id: 26,
@@ -490,8 +440,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 5,
     type_id: 1,
-    stars: 1,
-    reviews: 1,
   },
   {
     id: 27,
@@ -509,8 +457,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 5,
     type_id: 2,
-    stars: 1,
-    reviews: 1,
   },
   {
     id: 28,
@@ -528,8 +474,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 11,
     type_id: 2,
-    stars: 5,
-    reviews: 10,
   },
   {
     id: 29,
@@ -547,8 +491,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 9,
     type_id: 2,
-    stars: 5,
-    reviews: 2,
   },
   {
     id: 30,
@@ -566,8 +508,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 4,
     type_id: 1,
-    stars: 5,
-    reviews: 5,
   },
   {
     id: 31,
@@ -585,8 +525,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 7,
     type_id: 2,
-    stars: 3,
-    reviews: 0,
   },
   {
     id: 32,
@@ -604,8 +542,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 8,
     type_id: 1,
-    stars: 3,
-    reviews: 8,
   },
   {
     id: 33,
@@ -623,8 +559,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 5,
     type_id: 2,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 34,
@@ -642,8 +576,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 2,
     type_id: 2,
-    stars: 2,
-    reviews: 8,
   },
   {
     id: 35,
@@ -661,8 +593,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 1,
     type_id: 2,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 36,
@@ -680,8 +610,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 6,
     type_id: 1,
-    stars: 5,
-    reviews: 6,
   },
   {
     id: 37,
@@ -699,8 +627,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 3,
     type_id: 2,
-    stars: 5,
-    reviews: 5,
   },
   {
     id: 38,
@@ -718,8 +644,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 2,
-    stars: 3,
-    reviews: 9,
   },
   {
     id: 39,
@@ -737,8 +661,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 7,
     type_id: 1,
-    stars: 5,
-    reviews: 8,
   },
   {
     id: 40,
@@ -756,8 +678,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 1,
-    stars: 3,
-    reviews: 5,
   },
   {
     id: 41,
@@ -775,8 +695,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 2,
     type_id: 1,
-    stars: 1,
-    reviews: 7,
   },
   {
     id: 42,
@@ -794,8 +712,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 6,
     type_id: 1,
-    stars: 5,
-    reviews: 2,
   },
   {
     id: 43,
@@ -813,8 +729,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 2,
     type_id: 1,
-    stars: 1,
-    reviews: 4,
   },
   {
     id: 44,
@@ -832,8 +746,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 10,
     type_id: 1,
-    stars: 4,
-    reviews: 4,
   },
   {
     id: 45,
@@ -851,8 +763,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 12,
     type_id: 1,
-    stars: 3,
-    reviews: 7,
   },
   {
     id: 46,
@@ -870,8 +780,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 5,
     type_id: 2,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 47,
@@ -889,8 +797,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 11,
     type_id: 1,
-    stars: 5,
-    reviews: 2,
   },
   {
     id: 48,
@@ -908,8 +814,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 10,
     type_id: 1,
-    stars: 4,
-    reviews: 10,
   },
   {
     id: 49,
@@ -927,8 +831,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 12,
     type_id: 1,
-    stars: 2,
-    reviews: 6,
   },
   {
     id: 50,
@@ -946,8 +848,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 1,
     type_id: 2,
-    stars: 2,
-    reviews: 5,
   },
   {
     id: 51,
@@ -965,8 +865,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 7,
     type_id: 1,
-    stars: 4,
-    reviews: 6,
   },
   {
     id: 52,
@@ -984,8 +882,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 5,
     type_id: 1,
-    stars: 5,
-    reviews: 7,
   },
   {
     id: 53,
@@ -1003,8 +899,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 11,
     type_id: 1,
-    stars: 2,
-    reviews: 4,
   },
   {
     id: 54,
@@ -1022,8 +916,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 1,
     type_id: 2,
-    stars: 5,
-    reviews: 1,
   },
   {
     id: 55,
@@ -1041,8 +933,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 9,
     type_id: 2,
-    stars: 4,
-    reviews: 3,
   },
   {
     id: 56,
@@ -1060,8 +950,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 1,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 57,
@@ -1079,8 +967,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 8,
     type_id: 1,
-    stars: 1,
-    reviews: 3,
   },
   {
     id: 58,
@@ -1098,8 +984,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 10,
     type_id: 1,
-    stars: 4,
-    reviews: 4,
   },
   {
     id: 59,
@@ -1117,8 +1001,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 3,
     type_id: 2,
-    stars: 4,
-    reviews: 8,
   },
   {
     id: 60,
@@ -1136,8 +1018,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 6,
     type_id: 1,
-    stars: 5,
-    reviews: 8,
   },
   {
     id: 61,
@@ -1155,8 +1035,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 4,
     type_id: 2,
-    stars: 3,
-    reviews: 0,
   },
   {
     id: 62,
@@ -1174,8 +1052,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 8,
     type_id: 1,
-    stars: 1,
-    reviews: 7,
   },
   {
     id: 63,
@@ -1193,8 +1069,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 1,
     type_id: 2,
-    stars: 3,
-    reviews: 10,
   },
   {
     id: 64,
@@ -1212,8 +1086,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 8,
     type_id: 1,
-    stars: 4,
-    reviews: 2,
   },
   {
     id: 65,
@@ -1231,8 +1103,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 5,
     type_id: 1,
-    stars: 4,
-    reviews: 3,
   },
   {
     id: 66,
@@ -1250,8 +1120,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 5,
     type_id: 1,
-    stars: 4,
-    reviews: 4,
   },
   {
     id: 67,
@@ -1269,8 +1137,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 8,
     type_id: 2,
-    stars: 1,
-    reviews: 4,
   },
   {
     id: 68,
@@ -1288,8 +1154,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 4,
     type_id: 1,
-    stars: 4,
-    reviews: 8,
   },
   {
     id: 69,
@@ -1307,8 +1171,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 12,
     type_id: 2,
-    stars: 4,
-    reviews: 10,
   },
   {
     id: 70,
@@ -1326,8 +1188,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 4,
     type_id: 1,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 71,
@@ -1345,8 +1205,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 3,
     type_id: 2,
-    stars: 5,
-    reviews: 6,
   },
   {
     id: 72,
@@ -1364,8 +1222,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 2,
-    stars: 5,
-    reviews: 0,
   },
   {
     id: 73,
@@ -1383,8 +1239,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 7,
     type_id: 2,
-    stars: 3,
-    reviews: 9,
   },
   {
     id: 74,
@@ -1402,8 +1256,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 11,
     type_id: 2,
-    stars: 5,
-    reviews: 7,
   },
   {
     id: 75,
@@ -1421,8 +1273,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 9,
     type_id: 1,
-    stars: 2,
-    reviews: 7,
   },
   {
     id: 76,
@@ -1440,8 +1290,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 9,
     type_id: 1,
-    stars: 3,
-    reviews: 10,
   },
   {
     id: 77,
@@ -1459,8 +1307,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 1,
-    stars: 2,
-    reviews: 7,
   },
   {
     id: 78,
@@ -1478,8 +1324,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 12,
     type_id: 2,
-    stars: 4,
-    reviews: 10,
   },
   {
     id: 79,
@@ -1497,8 +1341,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 2,
     type_id: 1,
-    stars: 1,
-    reviews: 4,
   },
   {
     id: 80,
@@ -1516,8 +1358,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 11,
     type_id: 1,
-    stars: 4,
-    reviews: 8,
   },
   {
     id: 81,
@@ -1535,8 +1375,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 12,
     type_id: 1,
-    stars: 5,
-    reviews: 9,
   },
   {
     id: 82,
@@ -1554,8 +1392,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 3,
     type_id: 1,
-    stars: 4,
-    reviews: 6,
   },
   {
     id: 83,
@@ -1573,8 +1409,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 10,
     type_id: 1,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 84,
@@ -1592,8 +1426,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 7,
     type_id: 1,
-    stars: 4,
-    reviews: 10,
   },
   {
     id: 85,
@@ -1611,8 +1443,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 10,
     type_id: 2,
-    stars: 4,
-    reviews: 1,
   },
   {
     id: 86,
@@ -1630,8 +1460,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 6,
     type_id: 1,
-    stars: 2,
-    reviews: 1,
   },
   {
     id: 87,
@@ -1649,8 +1477,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 10,
     type_id: 2,
-    stars: 3,
-    reviews: 9,
   },
   {
     id: 88,
@@ -1668,8 +1494,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 5,
     type_id: 1,
-    stars: 4,
-    reviews: 2,
   },
   {
     id: 89,
@@ -1687,8 +1511,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 5,
     type_id: 2,
-    stars: 1,
-    reviews: 10,
   },
   {
     id: 90,
@@ -1706,8 +1528,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 5,
     type_id: 1,
-    stars: 4,
-    reviews: 9,
   },
   {
     id: 91,
@@ -1725,8 +1545,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 3,
     type_id: 2,
-    stars: 5,
-    reviews: 6,
   },
   {
     id: 92,
@@ -1744,8 +1562,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 3,
     type_id: 2,
-    stars: 3,
-    reviews: 8,
   },
   {
     id: 93,
@@ -1763,8 +1579,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 7,
     type_id: 2,
-    stars: 5,
-    reviews: 3,
   },
   {
     id: 94,
@@ -1782,8 +1596,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 11,
     type_id: 2,
-    stars: 2,
-    reviews: 7,
   },
   {
     id: 95,
@@ -1801,8 +1613,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 10,
     type_id: 1,
-    stars: 2,
-    reviews: 5,
   },
   {
     id: 96,
@@ -1820,8 +1630,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 7,
     type_id: 2,
-    stars: 1,
-    reviews: 2,
   },
   {
     id: 97,
@@ -1839,8 +1647,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 5,
     type_id: 2,
-    stars: 3,
-    reviews: 2,
   },
   {
     id: 98,
@@ -1858,8 +1664,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 2,
     type_id: 1,
-    stars: 4,
-    reviews: 7,
   },
   {
     id: 99,
@@ -1877,8 +1681,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 4,
     type_id: 2,
-    stars: 4,
-    reviews: 6,
   },
   {
     id: 100,
@@ -1896,8 +1698,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 2,
     type_id: 1,
-    stars: 4,
-    reviews: 9,
   },
   {
     id: 101,
@@ -1915,8 +1715,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 3,
     type_id: 2,
-    stars: 3,
-    reviews: 7,
   },
   {
     id: 102,
@@ -1934,8 +1732,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 4,
     type_id: 1,
-    stars: 4,
-    reviews: 0,
   },
   {
     id: 103,
@@ -1953,8 +1749,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 3,
     type_id: 2,
-    stars: 2,
-    reviews: 1,
   },
   {
     id: 104,
@@ -1972,8 +1766,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 12,
     type_id: 2,
-    stars: 5,
-    reviews: 8,
   },
   {
     id: 105,
@@ -1991,8 +1783,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 8,
     type_id: 1,
-    stars: 4,
-    reviews: 0,
   },
   {
     id: 106,
@@ -2010,8 +1800,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 5,
     type_id: 1,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 107,
@@ -2029,8 +1817,6 @@ export const propertyPosts = [
     categories_id: 2,
     agents_id: 9,
     type_id: 2,
-    stars: 2,
-    reviews: 10,
   },
   {
     id: 108,
@@ -2048,8 +1834,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 3,
     type_id: 2,
-    stars: 2,
-    reviews: 8,
   },
   {
     id: 109,
@@ -2067,8 +1851,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 9,
     type_id: 1,
-    stars: 2,
-    reviews: 7,
   },
   {
     id: 110,
@@ -2086,8 +1868,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 4,
     type_id: 2,
-    stars: 2,
-    reviews: 2,
   },
   {
     id: 111,
@@ -2105,8 +1885,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 12,
     type_id: 2,
-    stars: 3,
-    reviews: 3,
   },
   {
     id: 112,
@@ -2124,8 +1902,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 3,
     type_id: 1,
-    stars: 3,
-    reviews: 2,
   },
   {
     id: 113,
@@ -2143,8 +1919,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 9,
     type_id: 1,
-    stars: 1,
-    reviews: 6,
   },
   {
     id: 114,
@@ -2162,8 +1936,6 @@ export const propertyPosts = [
     categories_id: 3,
     agents_id: 9,
     type_id: 1,
-    stars: 3,
-    reviews: 3,
   },
   {
     id: 115,
@@ -2181,8 +1953,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 3,
     type_id: 1,
-    stars: 3,
-    reviews: 1,
   },
   {
     id: 116,
@@ -2200,8 +1970,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 4,
     type_id: 1,
-    stars: 2,
-    reviews: 4,
   },
   {
     id: 117,
@@ -2219,8 +1987,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 12,
     type_id: 1,
-    stars: 2,
-    reviews: 0,
   },
   {
     id: 118,
@@ -2238,8 +2004,6 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 11,
     type_id: 2,
-    stars: 5,
-    reviews: 3,
   },
   {
     id: 119,
@@ -2257,8 +2021,6 @@ export const propertyPosts = [
     categories_id: 4,
     agents_id: 12,
     type_id: 2,
-    stars: 1,
-    reviews: 1,
   },
   {
     id: 120,
@@ -2276,7 +2038,5 @@ export const propertyPosts = [
     categories_id: 1,
     agents_id: 1,
     type_id: 1,
-    stars: 4,
-    reviews: 5,
   },
 ];

@@ -8,6 +8,7 @@ import Wrapper from "../Wrapper/Wrapper";
 import Image from "../Image/Image";
 import {useSelector} from "react-redux";
 import StarComponent from "../StarComponent/StarComponent";
+import Heart from "../Heart/Heart";
 
 const VerticalProductItem = ({className, property}) => {
   const locations = useSelector((state) => state.locations.locations);
@@ -27,6 +28,7 @@ const VerticalProductItem = ({className, property}) => {
             src={`/public/properties/${prop_id}-1.jpg`}
           />
         </Link>
+        <Heart property={property} />
       </div>
       <div className="vertical-product-block-info">
         <div className="vertical-product-status-block">
@@ -55,7 +57,10 @@ const VerticalProductItem = ({className, property}) => {
         <div className="rating-wrap">
           <div className="rating">
             <div className="product-rate">
-              <StarComponent rating={4} totalReviews={3} />
+              <StarComponent
+                rating={property?.stars}
+                totalReviews={property?.reviews}
+              />
             </div>
           </div>
         </div>

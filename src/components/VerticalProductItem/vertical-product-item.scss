@@ -22,6 +22,9 @@
     width: 100%;
     padding-top: 60%;
     overflow: hidden;
+    &-block {
+      position: relative;
+    }
     img {
       position: absolute;
       top: 0;
