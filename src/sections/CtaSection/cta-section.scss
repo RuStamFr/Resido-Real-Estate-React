@@ -33,7 +33,7 @@
   line-height: 2.25rem;
   margin-bottom: 0.5rem;
 }
-.mb-5 {
+.cta-desc {
   font-family: "Play";
   color: $white;
   font-size: 1rem;
@@ -41,7 +41,8 @@
   line-height: 1.8;
   margin-bottom: 3rem;
 }
-.cta-section-view-btn {
+.cta-section-view-link {
+  width: 100%;
   background-color: #f8f9fa;
   border: 2px solid transparent;
   cursor: pointer;

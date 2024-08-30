@@ -8,7 +8,7 @@ const BlogBlock = ({title, date, desc, src, className}) => {
   return (
     <div className={`blog-block ${className}`}>
       <Wrapper className={"blog-block-image"}>
-        <Link>
+        <Link to={"/blog-details/:id"}>
           <Image className={"blog-block-image-border"} src={src} />
         </Link>
       </Wrapper>
@@ -21,11 +21,11 @@ const BlogBlock = ({title, date, desc, src, className}) => {
         </span>
       </div>
       <div className="blog-body">
-        <h4 className="blog-title">
-          <Link to={"/"}>{title}</Link>
-        </h4>
+        <h2 className="blog-title">
+          <Link to={"/blog-details/:id"}>{title}</Link>
+        </h2>
         <p className="blog-desc">{desc}</p>
-        <Link to={"/"} className="blog-continue">
+        <Link to={"/blog-details/:id"} className="blog-continue">
           Continue
           <Wrapper width={"2rem"}>
             <Image src={RightYellowArrow} className={"blog-continue-arrow"} />

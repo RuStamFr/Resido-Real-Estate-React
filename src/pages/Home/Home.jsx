@@ -9,12 +9,12 @@ import "./home.scss";
 const Home = () => {
   return (
     <div className={"home-page"}>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <ListingSection />
       <LocationsSection />
       <HiwSection />
-      {/* <CtaSection />
-      <BlogSection /> */}
+      <CtaSection />
+      <BlogSection />
     </div>
   );
 };

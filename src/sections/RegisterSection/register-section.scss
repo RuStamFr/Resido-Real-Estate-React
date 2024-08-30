@@ -9,11 +9,11 @@
     max-width: 51.875rem;
   }
   .register-block {
-    padding: 2.5em 3em;
-    pointer-events: auto;
+    @include resp(padding, 0, 0, 2.5rem 3rem);
+    @include resp(border, none, none, 1px solid rgba(0, 0, 0, 0.2));
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+
     border-radius: 0.3rem;
     display: flex;
     flex-direction: column;
@@ -22,6 +22,7 @@
     }
     .register-input-blocks {
       @include flex(row, center, space-between);
+      @include resp(flex-direction, column, row, row, row);
       flex-wrap: wrap;
     }
     .text-center {
@@ -33,7 +34,7 @@
       margin-bottom: 1.5rem;
     }
     .input-block {
-      width: calc(50% - 1.5rem);
+      @include resp(width, 100%, 100%, calc(50% - 1.5rem));
       position: relative;
       margin-bottom: 0.9375rem;
 

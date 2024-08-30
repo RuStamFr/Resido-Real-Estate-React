@@ -34,7 +34,7 @@ const ListingSection = () => {
           <p>
             Discover your dream home in the perfect location. Explore a wide
             range of properties in vibrant neighborhoods, tailored to your
-            lifestyle and needs."
+            lifestyle and needs.
           </p>
         </div>
       </div>

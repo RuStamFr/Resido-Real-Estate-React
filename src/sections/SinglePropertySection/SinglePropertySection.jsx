@@ -168,7 +168,7 @@ const SinglePropertySection = () => {
             </div>
           </div>
           <div className="property-block">
-            <h4 className="property-block-title">Detail &amp; Features</h4>
+            <h2 className="property-block-title">Detail &amp; Features</h2>
             <div className="block-body">
               <ul className="detail-features">
                 <li className="detail-features-li">
@@ -187,11 +187,11 @@ const SinglePropertySection = () => {
             </div>
           </div>
           <div className="property-block">
-            <h4 className="property-block-title">Description</h4>
+            <h2 className="property-block-title">Description</h2>
             <p>{property?.description}</p>
           </div>
           <div className="property-block">
-            <h4 className="property-block-title">Gallery</h4>
+            <h2 className="property-block-title">Gallery</h2>
             <ul className="list-gallery-inline">
               {getItems().map((item) => {
                 return (
@@ -208,7 +208,7 @@ const SinglePropertySection = () => {
             </ul>
           </div>
           <div className="property-block">
-            <h4 className="property-block-title">{comments.length} Reviews</h4>
+            <h2 className="property-block-title">{comments.length} Reviews</h2>
             <div className="comment-block">
               <ul className="comment-block-list">
                 {comments.map((comment) => {
@@ -225,14 +225,14 @@ const SinglePropertySection = () => {
                 <Image className={"agent-image"} src={agent?.photo} />
               </div>
               <div className="msg-block-info">
-                <h4>
+                <h2>
                   <Link
                     className="msg-agent-name"
                     to={`/agent-details/${agent?.id}`}
                   >
                     {agent?.name}
                   </Link>
-                </h4>
+                </h2>
                 <div className="msg-agent-phone">
                   <Wrapper width={"1rem"}>
                     <Image src={MsgPhoneIcon} />

@@ -119,7 +119,7 @@ const BlogDetailsSection = ({watched}) => {
           <div className="details-bottom-blocks">
             <div className="details-bottom-left-block">
               <div className="details-bottom-left-block-title-wrapper">
-                <h4 className="details-bottom-left-block-title">Tags</h4>
+                <h2 className="details-bottom-left-block-title">Tags</h2>
               </div>
               <ul className="list">
                 <li>
@@ -142,9 +142,9 @@ const BlogDetailsSection = ({watched}) => {
 
             <div className="details-bottom-right-block">
               <div className="details-bottom-right-block-title-wrapper">
-                <h4 className="details-bottom-right-block-title">
+                <h2 className="details-bottom-right-block-title">
                   Share this post:
-                </h4>
+                </h2>
               </div>
               <ul className="list">
                 <li>
@@ -198,7 +198,7 @@ const BlogDetailsSection = ({watched}) => {
 
         <div className="details-right">
           <div className="details-category-block">
-            <h4 className="category-title">Categories</h4>
+            <h2 className="category-title">Categories</h2>
             <ul className="category-list">
               <li className="category-li">
                 <Link className="text-dark">Latest news</Link>

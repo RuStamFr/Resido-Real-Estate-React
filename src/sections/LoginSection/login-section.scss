@@ -8,15 +8,22 @@
     width: 100%;
     max-width: 34rem;
     .login-block {
+      @include resp(padding, 0, 2.5rem 3rem, 2.5rem 3rem);
+      @include resp(
+        border,
+        none,
+        1px solid rgba(0, 0, 0, 0.2),
+        1px solid rgba(0, 0, 0, 0.2)
+      );
       display: flex;
       flex-direction: column;
       width: 100%;
       pointer-events: auto;
       background-color: #fff;
       background-clip: padding-box;
-      padding: 2.5em 3em;
+      // padding: 2.5em 3em;
 
-      border: 1px solid rgba(0, 0, 0, 0.2);
+      // border: 1px solid rgba(0, 0, 0, 0.2);
       border-radius: 0.3rem;
       .text-center {
         color: #2d3954;

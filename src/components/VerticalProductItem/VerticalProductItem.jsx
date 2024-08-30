@@ -46,14 +46,14 @@ const VerticalProductItem = ({className, property}) => {
               ${property?.type_id === 1 ? " / monthly" : ""}`}
           </h6>
         </div>
-        <h4 className="vertical-product-name">
+        <h2 className="vertical-product-name">
           <Link
             to={`/single-property/${property?.id}`}
             className="vertical-product-name-link"
           >
             {property?.title}
           </Link>
-        </h4>
+        </h2>
         <div className="rating-wrap">
           <div className="rating">
             <div className="product-rate">

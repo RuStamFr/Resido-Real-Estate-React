@@ -6,10 +6,10 @@ const CtaSection = () => {
     <Section className={"cta-section"}>
       <div className="cta">
         <h2 className="cta-title">Search Perfect Place In Your City</h2>
-        <p className="mb-5">
+        <p className="cta-desc">
           We post regulary most powerful articles for help and support.
         </p>
-        <Link to={"/"} className="cta-section-view-btn">
+        <Link to={"/properties"} className="cta-section-view-link">
           Explore More Property
         </Link>
       </div>

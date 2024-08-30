@@ -14,7 +14,7 @@ const CommentBlock = ({comment}) => {
       </div>
       <div className="comment-body">
         <StarComponent rating={comment.rating} />
-        <h4 className="author-name">{comment.name}</h4>
+        <h2 className="author-name">{comment.name}</h2>
         <div className="comment-date">{comment.date}</div>
         <p className="comment-text">{comment.message}</p>
       </div>

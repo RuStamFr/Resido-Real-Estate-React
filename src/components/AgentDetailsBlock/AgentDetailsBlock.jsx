@@ -12,7 +12,7 @@ const AgentDetailsBlock = ({agent, properties}) => {
         </div>
         <div className="agency-content">
           <div className="agency-name-info">
-            <h4 className="agency-name">{agent?.name}</h4>
+            <h2 className="agency-name">{agent?.name}</h2>
             <span className="agency-phone-info">
               <Wrapper className={"agency-phone-icon"} width={"0.9375rem"}>
                 <Image src={AgentPhoneIcon} />

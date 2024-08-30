@@ -44,9 +44,9 @@ const NewsBlock = ({title, watched, desc, src}) => {
         </div>
       </div>
       <div className="news-body">
-        <h4 className="news-title">
+        <h2 className="news-title">
           <Link to={"/"}>{title}</Link>
-        </h4>
+        </h2>
         <p className="news-desc">{desc}</p>
         <Link to={"/"} className="news-continue">
           Continue

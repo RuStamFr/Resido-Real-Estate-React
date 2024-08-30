@@ -288,11 +288,11 @@ const PropertiesSection = () => {
       <div className="content-block">
         <div className="sorting-block">
           <div className="sorting-title">
-            <h4>{`Found 1 - ${
+            <h2>{`Found 1 - ${
               visibleProperties > filteredProperties.length
                 ? filteredProperties.length
                 : visibleProperties
-            } Of ${filteredProperties.length} Results`}</h4>
+            } Of ${filteredProperties.length} Results`}</h2>
           </div>
           <div className="sorting-right-block">
             <div className="sorting-select-div">

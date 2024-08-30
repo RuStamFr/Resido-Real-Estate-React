@@ -44,7 +44,7 @@ const ProductItem = ({className, property}) => {
             to={`/single-property/${property?.id}`}
             className="product-address"
           >
-            <h4>{property?.title}</h4>
+            <h2>{property?.title}</h2>
           </Link>
           <div className="product-price-blocks">
             <div className="product-price-left">
