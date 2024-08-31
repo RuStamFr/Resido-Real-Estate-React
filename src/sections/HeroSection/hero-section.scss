@@ -43,9 +43,7 @@
 }
 .form-row {
   @include flex(row, center, space-between);
-  & .form-group:first-child {
-    margin-right: 1.5rem;
-  }
+  flex-wrap: wrap;
 }
 .form-group {
   margin-bottom: 1rem;
@@ -85,7 +83,16 @@
   background-color: #ffa50d;
   border: none;
   transition: all 0.3s ease;
+  margin-top: 1rem;
   &:hover {
     filter: brightness(0.9);
+  }
+}
+@media (min-width: 576px) {
+  .form-row {
+    flex-wrap: nowrap;
+    & .form-group:first-child {
+      margin-right: 1.5rem;
+    }
   }
 }

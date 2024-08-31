@@ -5,17 +5,16 @@ import rightArrow from "../../assets/icons/right-arrow.png";
 import GreenBtn from "../../components/GreenBtn/GreenBtn";
 import {useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
 
 const LocationsSection = () => {
+  const navigate = useNavigate();
   const locations = useSelector((state) => state.locations.locations);
-  const dispatch = useDispatch();
+  const posts = useSelector((state) => state.propertyPosts.propertyPosts);
+
   const [visibleLocations, setVisibleLocations] = useState(6);
   const handleLoadMore = () => {
     setVisibleLocations((prevVisible) => prevVisible + 6);
-  };
-
-  const handleClick = () => {
-    dispatch();
   };
 
   return (
@@ -28,13 +27,19 @@ const LocationsSection = () => {
       </p>
       <div className={"locations-section-list"}>
         {locations.slice(0, visibleLocations).map((item) => {
+          const localPosts = posts.filter((post) => {
+            return +post.locations_id === +item.id;
+          });
+          const postCount = localPosts.length;
+          const handleClick = () => {
+            navigate(`/properties?location=${item.name}`);
+          };
           return (
-            <div
-              key={item.id}
-              onClick={handleClick}
-              className={"locations-section-card"}
-            >
-              <div className={"locations-section-card-image-link"}>
+            <div key={item.id} className={"locations-section-card"}>
+              <div
+                onClick={handleClick}
+                className={"locations-section-card-image-link"}
+              >
                 <Image
                   src={item.src}
                   className={"locations-section-card-image"}
@@ -43,9 +48,12 @@ const LocationsSection = () => {
               <div className={"locations-section-card-content"}>
                 <div className={"locations-section-card-content-left"}>
                   <h3>{item.name}</h3>
-                  {/* <p>{item.count}</p> */}
+                  <p>{postCount} properties</p>
                 </div>
-                <div className={"locations-section-card-button-link"}>
+                <div
+                  onClick={handleClick}
+                  className={"locations-section-card-button-link"}
+                >
                   <Image
                     src={rightArrow}
                     className={"locations-section-card-button-icon"}
@@ -56,7 +64,9 @@ const LocationsSection = () => {
           );
         })}
       </div>
-      <GreenBtn text={"Browse More Locations"} onClick={handleLoadMore} />
+      {visibleLocations < locations.length && (
+        <GreenBtn text={"Browse More Locations"} onClick={handleLoadMore} />
+      )}
     </Section>
   );
 };

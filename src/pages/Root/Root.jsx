@@ -2,6 +2,7 @@ import "./root.scss";
 import {Outlet} from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import ScrollToTop from "../../router/ScrollToTop";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {fetchAgents} from "../../store/slices/agentsSlice";
@@ -20,13 +21,13 @@ const Root = () => {
   }, [dispatch]);
 
   return (
-    <>
+    <ScrollToTop>
       <Header />
       <main className={"page-main"}>
         <Outlet />
       </main>
       <Footer />
-    </>
+    </ScrollToTop>
   );
 };
 export default Root;

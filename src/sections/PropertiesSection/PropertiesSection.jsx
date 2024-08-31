@@ -1,3 +1,6 @@
+import {useSelector} from "react-redux";
+import {useState, useEffect} from "react";
+import {useLocation} from "react-router-dom";
 import Section from "../../components/Section/Section";
 import "./properties-section.scss";
 import PinIcon from "../../assets/icons/pin.svg";
@@ -8,13 +11,13 @@ import VerticalProductItem from "../../components/VerticalProductItem/VerticalPr
 import ProductItem from "../../sections/ListingSection/ProductItem/ProductItem.jsx";
 import GridIcon from "../../assets/images/GridIcon.jsx";
 import GridList from "../../assets/images/GridList.jsx";
-import {useSelector} from "react-redux";
-import {useState} from "react";
 
 const PropertiesSection = () => {
   const properties = useSelector((state) => state.propertyPosts.propertyPosts);
   const locations = useSelector((state) => state.locations.locations);
   const categories = useSelector((state) => state.categories.categories);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("");
@@ -29,23 +32,33 @@ const PropertiesSection = () => {
   const [minArea, setMinArea] = useState("");
   const [maxArea, setMaxArea] = useState("");
 
+  useEffect(() => {
+    setSearchQuery(searchParams.get("location") || "");
+    setCategoryFilter(searchParams.get("category") || "");
+    setSortCriteria(searchParams.get("sort") || "");
+    setTypeFilter(searchParams.get("type") || "");
+    setMinPrice(searchParams.get("min_price") || "");
+    setMaxPrice(searchParams.get("max_price") || "");
+    setBedroomFilter(searchParams.get("bedrooms") || "");
+    setBathroomFilter(searchParams.get("bathrooms") || "");
+    setMinArea(searchParams.get("min_area") || "");
+    setMaxArea(searchParams.get("max_area") || "");
+  }, [location.search]);
+
   const handleLoadMore = () => {
     setVisibleProperties((prevVisible) => prevVisible + 20);
   };
 
   const handleSortChange = (event) => {
-    const value = event.target.value;
-    setSortCriteria(value);
+    setSortCriteria(event.target.value);
   };
 
   const handleCategoryChange = (event) => {
-    const value = event.target.value;
-    setCategoryFilter(value);
+    setCategoryFilter(event.target.value);
   };
 
   const handleTypeChange = (event) => {
-    const value = event.target.value;
-    setTypeFilter(value);
+    setTypeFilter(event.target.value);
   };
 
   const handleMinPriceChange = (e) => {
@@ -63,13 +76,11 @@ const PropertiesSection = () => {
   };
 
   const handleBedroomChange = (event) => {
-    const value = event.target.value;
-    setBedroomFilter(value);
+    setBedroomFilter(event.target.value);
   };
 
   const handleBathroomChange = (event) => {
-    const value = event.target.value;
-    setBathroomFilter(value);
+    setBathroomFilter(event.target.value);
   };
 
   const handleMinAreaChange = (e) => {
@@ -288,7 +299,7 @@ const PropertiesSection = () => {
       <div className="content-block">
         <div className="sorting-block">
           <div className="sorting-title">
-            <h2>{`Found 1 - ${
+            <h2>{`Found ${
               visibleProperties > filteredProperties.length
                 ? filteredProperties.length
                 : visibleProperties
@@ -296,7 +307,11 @@ const PropertiesSection = () => {
           </div>
           <div className="sorting-right-block">
             <div className="sorting-select-div">
-              <select className="sorting-select" onChange={handleSortChange}>
+              <select
+                className="sorting-select"
+                value={sortCriteria}
+                onChange={handleSortChange}
+              >
                 <option value="">Sort by</option>
                 <option value="price-low-high">Price: Low to High</option>
                 <option value="price-high-low">Price: High to Low</option>
