@@ -1,9 +1,54 @@
 @import "../../styles/mixins";
 @import "../../styles/colors";
 
+.mobile-menu {
+  position: fixed;
+  @include flex(column, flex-start, flex-start, 100vw);
+  z-index: 1001;
+  height: 100vh;
+  top: 0;
+  left: -100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  .mobile-nav {
+    @include flex(column, flex-start, flex-start, 70%);
+    min-width: 15rem;
+    max-width: 20rem;
+    height: 100%;
+    background-color: white;
+    transition: transform 1s ease;
+    transform: translateX(-100vw);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+      rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+      rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    padding: 1rem;
+    &-link {
+      @include flex(row, center, flex-start);
+      padding: 1rem 0;
+      :last-child {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &.open {
+    left: 0;
+    opacity: 1;
+    .mobile-nav {
+      transform: translateX(0);
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
 .header {
   position: fixed;
-  z-index: 999;
+  z-index: 1000;
   width: 100%;
   background-color: white;
   &-top {
@@ -14,6 +59,14 @@
     &-content {
       @include flex(row, center, flex-end);
     }
+  }
+  .hamburger {
+    @include flex(column, center, center);
+    @include resp(display, flex, flex, flex, none);
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+    cursor: pointer;
   }
   &-bottom {
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;

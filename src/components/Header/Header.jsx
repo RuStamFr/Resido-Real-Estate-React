@@ -5,10 +5,12 @@ import Section from "../Section/Section";
 import SignBtn from "../SignBtn/SignBtn";
 import Wrapper from "../Wrapper/Wrapper";
 import "./header.scss";
-import AddPropertyBtn from "../AddPropertyBtn/AddPropertyBtn";
 import {useDispatch, useSelector} from "react-redux";
 import LogOutBtn from "../LogOutBtn/LogOutBtn";
 import {logOutUser} from "../../store/slices/authSlice";
+import hamburger from "./hamburger.png";
+import Image from "../Image/Image";
+import {useState} from "react";
 
 export const headerNav = [
   {
@@ -39,42 +41,73 @@ const Header = () => {
   const handleClick = () => {
     dispatch(logOutUser());
   };
+
+  const [open, setOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setOpen((prev) => !prev);
+  };
+
   return (
-    <header className="header">
-      <Section className={"header-top"}>
-        <FavoritesWidget />
-      </Section>
-      <Section className={"header-bottom"}>
-        <Wrapper align={"center"} direction={"row"}>
-          <Wrapper width={"9rem"}>
-            <Logo />
+    <>
+      <div
+        className={`mobile-menu ${open ? "open" : ""}`}
+        onClick={handleMenuClick}
+      >
+        <nav className="mobile-nav">
+          {headerNav.map((item) => {
+            return (
+              <Link key={item.name} to={item.href} className="mobile-nav-link">
+                <div>{item.name}</div>
+              </Link>
+            );
+          })}
+          <div className="header-right-btn">
+            {auth.auth ? (
+              <LogOutBtn text={"Log out"} onClick={handleClick} />
+            ) : (
+              <SignBtn text={"Sign in"} />
+            )}
+          </div>
+        </nav>
+      </div>
+      <header className="header">
+        <Section className={"header-top"}>
+          <FavoritesWidget />
+        </Section>
+        <Section className={"header-bottom"}>
+          <Wrapper align={"center"} direction={"row"}>
+            <Wrapper width={"9rem"}>
+              <Logo />
+            </Wrapper>
+            <nav className="header-nav">
+              {headerNav.map((item) => {
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="header-nav-link"
+                  >
+                    <div>{item.name}</div>
+                  </Link>
+                );
+              })}
+            </nav>
           </Wrapper>
-          <nav className="header-nav">
-            {headerNav.map((item) => {
-              return (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="header-nav-link"
-                >
-                  <div>{item.name}</div>
-                </Link>
-              );
-            })}
-          </nav>
-        </Wrapper>
 
-        <div className="header-right-btn">
-          <AddPropertyBtn text={" Add Property"} />
-
-          {auth.auth ? (
-            <LogOutBtn text={"Log out"} onClick={handleClick} />
-          ) : (
-            <SignBtn text={"Sign in"} />
-          )}
-        </div>
-      </Section>
-    </header>
+          <div className="header-right-btn">
+            {auth.auth ? (
+              <LogOutBtn text={"Log out"} onClick={handleClick} />
+            ) : (
+              <SignBtn text={"Sign in"} />
+            )}
+          </div>
+          <div className={"hamburger"} onClick={handleMenuClick}>
+            <Image src={hamburger} />
+          </div>
+        </Section>
+      </header>
+    </>
   );
 };
 export default Header;
