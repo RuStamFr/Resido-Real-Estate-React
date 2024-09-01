@@ -24,14 +24,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      // {
-      //   path: "add-new-property",
-      //   element: (
-      //     <ProtectedRoute>
-      //       <AddNewProperty />
-      //     </ProtectedRoute>
-      //   ),
-      // },
+
       {
         path: "agent-details/:agentId",
         element: <AgentDetails />,
