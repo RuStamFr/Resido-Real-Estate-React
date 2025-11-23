@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./set-star-rating.scss";
-
-const SetStarRating = ({onRatingChange}) => {
+const SetStarRating = ({ onRatingChange }) => {
   const [rating, setRating] = useState(0);
   const [hover, setHover] = useState(0);
 

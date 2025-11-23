@@ -1,16 +1,16 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import FavoritesWidget from "../FavoritesWidget/FavoritesWidget";
 import Logo from "../Logo/Logo";
 import Section from "../Section/Section";
 import SignBtn from "../SignBtn/SignBtn";
 import Wrapper from "../Wrapper/Wrapper";
 import "./header.scss";
-import {useDispatch, useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LogOutBtn from "../LogOutBtn/LogOutBtn";
-import {logOutUser} from "../../store/slices/authSlice";
+import { logOutUser } from "../../store/slices/authSlice";
 import hamburger from "./hamburger.png";
 import Image from "../Image/Image";
-import {useState} from "react";
+import { useState } from "react";
 
 export const headerNav = [
   {

@@ -1,9 +1,12 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {addFavorite, removeFavorite} from "../../store/slices/favouritesSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addFavorite,
+  removeFavorite,
+} from "../../store/slices/favouritesSlice";
 import "./heart.scss";
 
-const Heart = ({property}) => {
+const Heart = ({ property }) => {
   const dispatch = useDispatch();
   const favourites = useSelector((state) => state.favourites || []);
 

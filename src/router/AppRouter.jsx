@@ -1,4 +1,3 @@
-import AddNewProperty from "../pages/AddNewProperty/AddNewProperty";
 import AgentDetails from "../pages/AgentDetails/AgentDetails";
 import Agents from "../pages/Agents/Agents";
 import Blogs from "../pages/Blogs/Blogs";

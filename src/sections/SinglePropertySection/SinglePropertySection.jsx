@@ -6,15 +6,15 @@ import PinIcon from "../../assets/icons/pin.svg";
 import BedIcon from "../ListingSection/image/bed.svg";
 import BathIcon from "../ListingSection/image/bathtub.svg";
 import MoveIcon from "../ListingSection/image/move.svg";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import CommentBlock from "../../components/CommentBlock/CommentBlock";
 import MsgPhoneIcon from "../../assets/icons/msg-telephone-icon.png";
 import Slider from "../../components/Slider/Slider";
-import {useLocation} from "react-router-dom";
-import {useSelector} from "react-redux";
+import { useLocation } from "react-router-dom";
+import { useSelector } from "react-redux";
 import PopupImage from "../../components/PopupImage/PopupImage";
 import SetStarRating from "../../components/SetStarRating/SetStarRating";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
 const SinglePropertySection = () => {
   const location = useLocation();
@@ -60,6 +60,11 @@ const SinglePropertySection = () => {
     setRating(newRating);
   };
 
+  const commentDate = new Date();
+  const day = commentDate.getDate();
+  const month = commentDate.getMonth() + 1;
+  const year = commentDate.getFullYear();
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -70,7 +75,7 @@ const SinglePropertySection = () => {
       rating,
       message,
       photo: photo ? URL.createObjectURL(photo) : null,
-      date: new Date().toISOString(),
+      date: `${month}.${day}.${year}`,
     };
 
     const updatedComments = [...comments, newComment];
@@ -102,11 +107,11 @@ const SinglePropertySection = () => {
     const src_4 = `/public/properties/${prop_id}-4.jpg`;
     const src_5 = `/public/properties/${prop_id}-5.jpg`;
     return [
-      {id: 1, src: src_1},
-      {id: 2, src: src_2},
-      {id: 3, src: src_3},
-      {id: 4, src: src_4},
-      {id: 5, src: src_5},
+      { id: 1, src: src_1 },
+      { id: 2, src: src_2 },
+      { id: 3, src: src_3 },
+      { id: 4, src: src_4 },
+      { id: 5, src: src_5 },
     ];
   };
 
